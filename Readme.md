@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Павел Юзов](https://up.htmlacademy.ru/htmlcss/30/user/1326199).
-* Наставник: `Неизвестно`.
+* Наставник: `Андрей Жилин` (https://htmlacademy.ru/profile/andreyka).
 
 ---
 
