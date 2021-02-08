@@ -8,7 +8,8 @@
     --nav_title_blue: #32425C;
     --icon_color: #C5C5C5;
     --color_button_order: #63A63E;
-    --color_border_logo : #B52933;
+    --color_border_logo: #B52933;
+    --logo_border_active: #8D1E26;
 
     /*Main colors*/
 
@@ -19,6 +20,8 @@
     --color_cart: #8ED78F;
     --color_truck: #FFC047;
     --logo_button_red: #EE3643;
+    --slider_bg_1: #987654;
+    --slider_bg_2: #241910;
 
     /*Section popular goods colors*/
     --color_panel_header: #F9F5F0;
@@ -63,16 +66,26 @@
     --color_button_states_red: #CA2C37;
     --color_states_slip_green: #5FBB2D;
     --color_states_clip_green_click: #518534;
+    --color_border_botton: #367315;
     --color_form_states: #B5B5B5;
 
     /*Text parameters*/
+    --font-family: "Cuprum", "PT Sans", "Tahoma", sans-serif;
     --body-text-size: 18px;
     --body-line-height: 24px;
     --body-font-weight: normal;
     --body-font-style: normal;
     --body-align-items: left;
 
+    /*STATES*/
+
+    --states-color-green: #5FBB2D;
+    --states-color-dark-blue: #161D29;
+
+
 }
+
+/*Fonts*/
 
 @font-face {
     font-family: "Cuprum";
@@ -81,8 +94,8 @@
     font-weight: 400;
     src: local("Сuprum regular"),
          local("Cuprum-regular"),
-         url(".../fonts/cuprum.woff2") format("woff2"),
-         url(".../fonts/cuprum.woff") format("woff");
+         url("../fonts/cuprum.woff2") format("woff2"),
+         url("../fonts/cuprum.woff") format("woff");
 }
 
 @font-face {
@@ -92,8 +105,8 @@
     font-weight: 700;
     src: local("Сuprum bold"),
          local("Cuprum-bold"),
-         url(".../fonts/cuprumbold.woff2") format("woff2"),
-         url(".../fonts/cuprumbold.woff") format("woff");
+         url("../fonts/cuprumbold.woff2") format("woff2"),
+         url("../fonts/cuprumbold.woff") format("woff");
 }
 
 @font-face {
@@ -103,8 +116,8 @@
     font-weight: 400;
     src: local("Сuprum italic"),
          local("Cuprum-italic"),
-         url(".../fonts/cuprumitalic.woff2") format("woff2"),
-         url(".../fonts/cuprumitalic.woff") format("woff");
+         url("../fonts/cuprumitalic.woff2") format("woff2"),
+         url("../fonts/cuprumitalic.woff") format("woff");
 }
 
 @font-face {
@@ -114,8 +127,8 @@
     font-weight: 700;
     src: local("Сuprum bold italic"),
          local("Cuprum-Bold-italic"),
-         url(".../fonts/cuprumbolditalic.woff2") format("woff2"),
-         url(".../fonts/cuprumbolditalic.woff") format("woff");
+         url("../fonts/cuprumbolditalic.woff2") format("woff2"),
+         url("../fonts/cuprumbolditalic.woff") format("woff");
 }
 
 @font-face {
@@ -125,8 +138,8 @@
     font-weight: 400;
     src: local("PT Sans"),
          local("PTSans-Regular"),
-         url(".../fonts/ptsans.woff2") format("woff2"),
-         url(".../fonts/ptsans.woff") format("woff");
+         url("../fonts/ptsans.woff2") format("woff2"),
+         url("../fonts/ptsans.woff") format("woff");
 }
 
 @font-face {
@@ -136,9 +149,35 @@
     font-weight: 700;
     src: local("PT Sans Bold"),
          local("PTSans-Bold"),
-         url(".../fonts/ptsansbold.woff2") format("woff2"),
-         url(".../fonts/ptsansbold.woff") format("woff");
+         url("../fonts/ptsansbold.woff2") format("woff2"),
+         url("../fonts/ptsansbold.woff") format("woff");
 }
+
+/*  |BASE|    Basic page settings  */
+/*  |HEADER|    Settings header   */
+/*  |HEADER|    Settings header up   */
+/*  |HEADER|    Settings header info and user account   */
+/*  |HEADER|    Settings header navigation panel   */
+/*  |MAIN|      Settings main   */
+/*  |MAIN|__SECTION-1    Settings sections of the section with popular section store   */
+/*  |MAIN|__SECTION-2    */
+/*  |MAIN|__SECTION-3    */
+/*  |MAIN|__SECTION-4    */
+/*  |MAIN|__SECTION-5    */
+/*  |FOOTER|    Settings footer   */
+/*  |FOOTER|__SECTION-1   */
+/*  |FOOTER|__SECTION-2   */
+
+
+
+
+
+
+
+
+
+
+/*  |BASE|    Basic page settings  */
 
 .page {
     font-family: "Cuprum", "PT Sans", "Tahoma" sans-serif;
@@ -157,6 +196,199 @@
     margin: -1px;
 }
 
+.header-menu-list,
+.manufacturers-list,
+.services-list,
+.info-company-list,
+.footer-up-list,
+.footer-down-list,
+.footer-social-list,
+.catalog-pages-list,
+.breadcrumbs-list {
+    list-style-type: none;
+}
+
+/*  |STATES|    */
+
+.header-logo:active,
+.footer-logo:active {
+    background-color: var(--color_error);
+    border-bottom: 5px solid var(--logo_border_active);
+}
+
+.header-bookmarks:active,
+.header-basket:active {
+    background-color: var(--states-color-dark-blue);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.header-order:hover {
+    background-color: var(--states-color-green);
+}
+
+.header-order:active {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.header-user-enter:hover,
+.header-user-registration:hover,
+.header-users-login-orders:hover,
+.header-users-login-account:hover {
+    color: var(--logo_button_red);
+}
+
+.header-user-enter:active,
+.header-user-registration:active,
+.header-users-login-orders:active,
+.header-users-login-account:active,
+.header-users-login-user:active {
+    color: var(--icon_color);
+}
+
+.header-menu-item:hover {
+    background-color: var(--color_footer_down_panel);
+}
+
+.header-menu-item:active {
+    background-color: var(--color_nav_black_blue);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.card-link:hover {
+    color: var(--basic_white);
+    background-color: rgba(197, 197, 197, 0.3);
+}
+
+.card-link:active {
+    color: var(--basic_white);
+    background-color: rgba(169, 169, 169, 0.3);
+}
+
+
+.button-products:hover,
+.button-manufacturers:hover,
+.services-button-credit:hover,
+.info-button:hover,
+.button-help:hover,
+.button-main:hover {
+    background-color: var(--color_button_states_red);
+}
+
+.button-products:active,
+.button-manufacturers:active,
+.services-button-credit:active,
+.info-button:active,
+.button-help:active,
+.button-main:active {
+    background-color: var(--color_error);
+}
+
+.container-card:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.container-card-link:hover {
+    background-color: var(--states-color-green);
+}
+
+.container-card-link:active {
+    background-color: var(--color_states_clip_green_click);
+}
+
+.container-card-button:hover {
+    border: 3px solid var(--nav_title_button_p_blue);
+}
+
+.container-card-button:active {
+    opacity: 0.5;
+}
+
+.manufacturers-item:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.manufacturers-item:active {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    opacity: 0.5;
+}
+
+.catalog-cards-filter-price:hover,
+.catalog-cards-filter-type:hover,
+.catalog-cards-filter-functions:hover {
+    color: var(--basic_black);
+    border-bottom: 1px solid var(--logo_button_red);
+}
+
+.catalog-cards-filter-price:active,
+.catalog-cards-filter-type:active,
+.catalog-cards-filter-functions:active {
+    color: var(--logo_button_red);
+    border-bottom: none;
+}
+
+.catalog-pages-item1:hover,
+.catalog-pages-item2:hover,
+.catalog-pages-item3:hover,
+.catalog-pages-item4:hover {
+    border: 1px solid var(--icon_color);
+}
+
+.catalog-pages-item1:active,
+.catalog-pages-item2:active,
+.catalog-pages-item3:active,
+.catalog-pages-item4:active {
+    border: 1px solid var(--logo_button_red);
+}
+
+.services-item-button1:hover,
+.services-item-button2:hover,
+.services-item-button3:hover {
+    background-color: var(--footer_blue);
+}
+
+.services-item-button1:active,
+.services-item-button2:active,
+.services-item-button3:active {
+    color: var(--nav_title_blue);
+    background-color: var(--basic_white);
+}
+
+.footer-up-item a:hover {
+    border-bottom: 1px solid var(--color_footer_nav_up);
+}
+
+.footer-up-item a:active {
+    border-bottom: none;
+    opacity: 0.5;
+}
+
+.footer-down-item a:hover {
+    border-bottom: 1px solid var(--color_footer_nav_down_1);
+}
+
+.footer-down-item:nth-child(2) a:hover {
+    border-bottom: 1px solid var(--color_footer_nav_down_2);
+}
+
+.footer-down-item a:active {
+    border-bottom: none;
+    opacity: 0.5;
+}
+
+.footer-contacts-connection-link:hover,
+.footer-development-connection-link:hover {
+    text-decoration: underline;
+}
+
+.footer-contacts-connection-link:active,
+.footer-development-connection-link:active {
+    color: var(--logo_button_red);
+    text-decoration: none;
+}
+
+/*  |HEADER|    Settings header   */
+/*  |HEADER|    Settings header up   */
+
 .header {
     background-image: url("../img/background/footer-bg.png");
 }
@@ -172,22 +404,29 @@
 
 .header-bookmarks,
 .header-basket {
+    font-family: var(--font-family);
     text-decoration: none;
     color: var(--basic_white);
 }
 
 .header-order {
+    font-family: var(--font-family);
     background-color: var(--color_button_order);
     text-decoration: none;
     color: var(--basic_white);
 }
 
+/*  |HEADER|    Settings header info and user account   */
+
 .header-description {
+    font-family: var(--font-family);
     font-style: oblique;
     color: var(--logo_button_red);
 }
 
 .header-contats-link {
+    font-family: var(--font-family);
+    font-weight: bold;
     font-size: 21px;
     line-height: 30px;
     text-decoration: none;
@@ -195,6 +434,8 @@
 }
 
 .header-address {
+    font-family: var(--font-family);
+    font-style: normal;
     font-size: 14px;
     line-height: 24px;
     color: var(--nav_title_blue);
@@ -202,6 +443,7 @@
 
 .header-user-registration,
 .header-user-enter {
+    font-family: var(--font-family);
     font-size: 21px;
     line-height: 21px;
     text-decoration: none;
@@ -209,27 +451,39 @@
     background-color: var(--basic_white);
 }
 
+.header-users-login-user {
+    font-family: var(--font-family);
+    font-size: 21px;
+    line-height: 21px;
+    color: var(--basic_black);
+    text-decoration: none;
+    background-color: var(--basic_white);
+}
+
+.header-users-login-orders,
+.header-users-login-account {
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--nav_title_blue);
+    text-decoration: none;
+}
+
+/*  |HEADER|    Settings header navigation panel   */
+
 .header-menu {
     background-color: var(--nav_title_blue);
     border-bottom: 5px solid var(--color_footer_down_panel);
 }
 
-.header-menu-list,
-.manufacturers-list,
-.services-list,
-.info-company-list,
-.footer-up-list,
-.footer-down-list,
-.footer-social-list,
-.catalog-pages-list,
-.breadcrumbs-list {
-    list-style-type: none;
-}
-
 .header-menu-item {
+    font-family: var(--font-family);
     color: var(--basic_white);
     text-decoration: none;
 }
+
+/*  |MAIN|      Settings main   */
+/*  |MAIN|__SECTION-1    Settings sections of the section with popular section store   */
 
 .card-materials {
     background-color: var(--color_paint);
@@ -252,12 +506,15 @@
 }
 
 .card-h3 {
+    font-family: var(--font-family);
+    font-weight: bold;
     font-size: 24px;
     line-height: 30px;
     color: var(--basic_white);
 }
 
 .card-link {
+    font-family: var(--font-family);
     font-size: 14px;
     line-height: 18px;
     color: var(--basic_white);
@@ -268,15 +525,19 @@
 
 .card-slider-slide1 {
     background-image: url("../img/background/perforator_men.jpg");
+    background-color: var(--slider_bg_1);
     background-repeat: no-repeat;
 }
 
 .card-slider-slide2 {
     background-image: url("../img/background/drill_men.jpg");
+    background-color: var(--slider_bg_2);
     background-repeat: no-repeat;
 }
 
 .slider-h3 {
+    font-family: var(--font-family);
+    font-weight: bold;
     font-size: 36px;
     line-height: 36px;
     color: var(--basic_white);
@@ -284,17 +545,23 @@
 }
 
 .slider-p {
+    font-family: var(--font-family);
     color: var(--basic_white);
 }
 
 .button-main {
+    font-family: var(--font-family);
     text-decoration: none;
     color: var(--basic_white);
     text-transform: uppercase;
     background-color: var(--logo_button_red);
 }
 
+/*  |MAIN|__SECTION-2    */
+
 .main-title {
+    font-family: var(--font-family);
+    font-weight: normal;
     font-size: 30px;
     line-height: 30px;
     color: var(--nav_title_blue);
@@ -303,6 +570,7 @@
 
 .button-products,
 .button-manufacturers {
+    font-family: var(--font-family);
     font-size: 14px;
     line-height: 18px;
     background-color: var(--logo_button_red);
@@ -321,16 +589,19 @@
 }
 
 .container-card-link {
+    font-family: var(--font-family);
     font-size: 14px;
     line-height: 18px;
     color: var(--basic_white);
     background-color: var(--color_button_order);
     text-decoration: none;
     text-transform: uppercase;
-    border-bottom: 3px solid var(--color_states_clip_green_click);
+    border-bottom: 3px solid var(--color_border_botton);
 }
 
 .container-card-button {
+    font-family: var(--font-family);
+    color: var(--nav_title_button_p_blue);
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
@@ -339,12 +610,16 @@
 }
 
 .container-card-h3 {
+    font-family: "PT Sans", "Tahoma", sans-serif;
+    font-weight: bold;
     font-size: 18px;
     line-height: 20px;
     color: var(--basic_black);
 }
 
 .container-card-old {
+    font-family: "PT Sans", "Tahoma", sans-serif;
+    font-weight: bold;
     font-size: 17px;
     line-height: 18px;
     color: var(--old_price_slip);
@@ -352,6 +627,8 @@
 }
 
 .container-card-new {
+    font-family: "PT Sans", "Tahoma", sans-serif;
+    font-weight: bold;
     font-size: 17px;
     line-height: 18px;
     color: var(--basic_white);
@@ -359,7 +636,14 @@
     background-repeat: no-repeat;
 }
 
+/*  |MAIN|__SECTION-3    */
+
+
+
+/*  |MAIN|__SECTION-4    */
+
 .servicse-h2 {
+    font-family: var(--font-family);
     font-size: 30px;
     line-height: 30px;
     color: var(--basic_black);
@@ -367,6 +651,7 @@
 }
 
 .services-description {
+    font-family: "PT Sans", "Tahoma", sans-serif;
     font-size: 13px;
     line-height: 24px;
     color: var(--basic_black);
@@ -379,6 +664,8 @@
 .services-item-button1,
 .services-item-button2,
 .services-item-button3 {
+    font-family: var(--font-family);
+    font-weight: normal;
     font-size: 21px;
     line-height: 30px;
     color: var(--basic_white);
@@ -390,6 +677,8 @@
 .services-delivery-h3,
 .services-guarantee-h3,
 .services-credit-h3 {
+    font-family: var(--font-family);
+    font-weight: 400;
     font-size: 30px;
     line-height: 30px;
     color: var(--nav_title_blue);
@@ -399,12 +688,14 @@
 .services-delivery-desc,
 .services-guarantee-desc,
 .services-credit-desc {
+    font-family: "PT Sans", "Tahoma", sans-serif;
     font-size: 13px;
     line-height: 24px;
     font-size: var(--basic_black);
 }
 
 .services-button-credit {
+    font-family: var(--font-family);
     font-size: 14px;
     line-height: 18px;
     color: var(--basic_white);
@@ -413,9 +704,11 @@
     text-transform: uppercase;
 }
 
+/*  |MAIN|__SECTION-5    */
+
 .info-company-h3,
 .contacts-company-h3 {
-    font-family: "Cuprum", sans-serif;
+    font-family: var(--font-family);
     font-weight: 400;
     font-size: 30px;
     line-height: 30px;
@@ -425,18 +718,22 @@
 
 .info-company-text1,
 .info-company-text2 {
+    font-family: "PT Sans", "Tahoma", sans-serif;
+    font-weight: normal;
     font-size: 13px;
     line-height: 24px;
     color: var(--basic_black);
 }
 
 .info-company-list-item {
+    font-family: var(--font-family);
     font-size: 18px;
     line-height: 24px;
     color: var(--basic_black);
 }
 
 .info-button {
+    font-family: var(--font-family);
     font-size: 14px;
     line-height: 18px;
     color: var(--basic_white);
@@ -446,12 +743,14 @@
 }
 
 .contacts-company-text {
+    font-family: "PT Sans", "Tahoma", sans-serif;
     font-size: 13px;
     line-height: 24px;
     color: var(--basic_black);
 }
 
 .button-help {
+    font-family: var(--font-family);
     font-size: 14px;
     line-height: 18px;
     color: var(--basic_white);
@@ -459,6 +758,9 @@
     text-decoration: none;
     text-transform: uppercase;
 }
+
+/*  |FOOTER|    Settings footer   */
+/*  |FOOTER|__SECTION-1   */
 
 .footer-up-nav {
     background-color: var(--nav_title_blue);
@@ -470,6 +772,7 @@
 }
 
 .footer-address {
+    font-family: var(--font-family);
     font-size: 18px;
     line-height: 24px;
     color: var(--color_footer_p);
@@ -477,11 +780,13 @@
 }
 
 .footer-up-item a {
+    font-family: var(--font-family);
     text-decoration: none;
     color: var(--color_footer_nav_up);
 }
 
 .footer-down-item a {
+    font-family: var(--font-family);
     text-decoration: none;
     color: var(--color_footer_nav_down_1);
 }
@@ -490,11 +795,14 @@
     color: var(--color_footer_nav_down_2);
 }
 
+/*  |FOOTER|__SECTION-2   */
+
 .footer-copyright {
     background-color: var(--color_footer_down_panel);
 }
 
 .footer-copyright-text {
+    font-family: var(--font-family);
     font-size: 16px;
     line-height: 18px;
     color: var(--basic_white);
@@ -502,6 +810,7 @@
 
 .footer-contacts-connection,
 .footer-development-connection {
+    font-family: var(--font-family);
     font-size: 16px;
     line-height: 18px;
     color: var(--basic_white);
@@ -509,33 +818,22 @@
 
 .footer-contacts-connection-link,
 .footer-development-connection-link {
+    font-family: var(--font-family);
     font-size: 16px;
     line-height: 18px;
     color: var(--color_footer_nav_down_1);
     text-decoration: none;
 }
 
-.header-users-login-user {
-    font-size: 21px;
-    line-height: 21px;
-    color: var(--basic_black);
-    text-decoration: none;
-    background-color: var(--basic_white);
-}
-
-.header-users-login-orders,
-.header-users-login-account {
-    font-size: 16px;
-    line-height: 18px;
-    color: var(--nav_title_blue);
-    text-decoration: none;
-}
+/*   |MAIN CATALOG|   */
 
 .catalog-info-perforators {
     background-color: var(--color_footer_nav_up);
 }
 
 .catalog-info-perforators-h2 {
+    font-family: var(--font-family);
+    font-weight: normal;
     font-size: 30px;
     line-height: 30px;
     color: var(--basic_black);
@@ -543,6 +841,7 @@
 }
 
 .catalog-info-perforators-text {
+    font-family: "PT Sans", "Tahoma", sans-serif;
     font-size: 13px;
     line-height: 24px;
     color: var(--basic_black);
@@ -557,6 +856,7 @@
 .catalog-pages-item2 a,
 .catalog-pages-item3 a,
 .catalog-pages-item4 a {
+    font-family: "PT Sans", "Tahoma", sans-serif;
     font-size: 13px;
     line-height: 18px;
     color: var(--basic_black);
@@ -565,6 +865,7 @@
 }
 
 .catalog-pages-item1 {
+    font-family: "PT Sans", "Tahoma", sans-serif;
     background-color: var(--logo_button_red);
 }
 
@@ -579,6 +880,7 @@
 .breadcrumbs-item1 a,
 .breadcrumbs-item2 a,
 .breadcrumbs-item3 a {
+    font-family: "PT Sans", "Tahoma", sans-serif;
     font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
@@ -587,6 +889,8 @@
 }
 
 .catalog-h2 {
+    font-family: var(--font-family);
+    font-weight: normal;
     font-size: 30px;
     line-height: 30px;
     color: var(--nav_title_blue);
@@ -595,16 +899,27 @@
 }
 
 .catalog-form-h3,
-.atalog-cards-filter-h3,
-.catalog-cards-filter-price,
-.catalog-cards-filter-type,
-.catalog-cards-filter-functions {
+.catalog-cards-filter-h3 {
+    font-family: "PT Sans", "Tahoma", sans-serif;
     font-size: 13px;
     line-height: 18px;
     color: var(--basic_black);
     text-transform: uppercase;
     font-weight: 400;
     text-decoration: none;
+}
+
+.catalog-cards-filter-price,
+.catalog-cards-filter-type,
+.catalog-cards-filter-functions {
+    font-family: "PT Sans", "Tahoma", sans-serif;
+    color: var(--icon_color);
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-decoration: none;
+    border-bottom: 1px dotted red;
 }
 
 .catalog-form-h3 {
@@ -618,6 +933,8 @@
 .catalog-slider-legend,
 .catalog-form-checkbox-legend,
 .catalog-form-radio-legend {
+    font-family: "PT Sans", "Tahoma", sans-serif;
+    font-weight: bold;
     font-size: 17px;
     line-height: 30px;
     color: var(--basic_black);
@@ -627,6 +944,8 @@
 .catalog-slider-fieldset,
 .catalog-form-checkbox-fieldset,
 .catalog-form-radio-fieldset {
+    font-family: "PT Sans", "Tahoma", sans-serif;
+    text-transform: uppercase;
     margin: 0;
     padding: 0;
     border: none;
@@ -634,6 +953,8 @@
 }
 
 .catalog-form-button {
+    font-family: "PT Sans", "Tahoma", sans-serif;
+    text-transform: uppercase;
     font-size: 13px;
     line-height: 18px;
     border: 1px solid var(--color_border_form_button);
