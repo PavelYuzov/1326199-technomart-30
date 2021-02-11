@@ -16,7 +16,7 @@
         <header class="header">
             <section class="header-user-navigation">
                 <h2 class="visually-hidden">Основное меню клиента</h2>
-                <a href="index.html">
+                <a class="header-search" href="index.html">
                     <img class="header-logo" src="img/logo/logo-technomart-header.svg" width="108" height="18" alt="Логотип компании Техномарт">
                 </a>
                 <form class="header-search-form" action="#" method="GET">
@@ -30,7 +30,7 @@
                 <h2 class="visually-hidden">Контаткты и личный кабинет</h2>
                 <p class="header-description">
                      Интернет-магазин
-                     строительных материалов
+                     строительных материалов<br>
                      и инструментов для ремонта
                 </p>
                 <div class="header-contacts">
@@ -115,7 +115,7 @@
             </section>
             <section class="popular-products">
                 <div class="popular-products-title">
-                    <h2 class="main-title">Популярные товары:</h2>
+                    <h2 class="main-title-products">Популярные товары:</h2>
                     <a class="button-products" href="#">Все популярные товары</a>
                 </div>
                 <div class="container-index-card">
@@ -179,7 +179,7 @@
             </section>
             <section class="popular-manufacturers">
                 <div class="popular-products-title">
-                    <h2 class="main-title">Популярные производители:</h2>
+                    <h2 class="main-title-manufacturers">Популярные производители:</h2>
                     <a class="button-manufacturers" href="#">Все производители</a>
                 </div>
                 <ul class="manufacturers-list">
@@ -231,43 +231,49 @@
                     Хороший интернет-магазин отличается от плохого не только ценами!
                     Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
                 </p>
-                <ul class="services-list">
-                    <li class="services-item" aria-current="page">
-                        <button class="services-item-button1">Доставка</button>
-                    </li>
-                    <li class="services-item">
-                        <button class="services-item-button2">Гарантия</button>
-                    </li>
-                    <li class="services-item">
-                        <button class="services-item-button3">Кредит</button>
-                    </li>
-                </ul>
-                <div class="services-delivery">
-                    <h3 class="services-delivery-h3">Доставка</h3>
-                    <p class="services-delivery-desc">
-                        Мы с удовольствием доставим ваш товар прямо
-                        к вашему подъезду совершенно бесплатно!
-                        Ведь мы не плохо заработаем,
-                        поднимая его на ваш этаж!
-                    </p>
-                </div>
-                <div class="services-guarantee">
-                    <h3 class="services-guarantee-h3">Гарантия</h3>
-                    <p class="services-guarantee-desc">
-                        Если купленный у нас товар поломается или заискрит,
-                        а также в случае пожара, спровоцированного его
-                        возгоранием, вы всегда можете быть уверены в нашей
-                        гарантии. Мы обменяем сгоревший товар на новый.
-                        Дом уж восстановите как-нибудь сами.
-                    </p>
-                </div>
-                <div class="services-credit">
-                    <h3 class="services-credit-h3">Кредит</h3>
-                    <p class="services-credit-desc">
-                        Залезть в долговую яму стало проще!
-                        Кредитные консультанты придут вам на помощь.
-                    </p>
-                    <a class="services-button-credit" href="#">Отправить заявку</a>
+                <div class="sevices-container">
+                    <ul class="services-list">
+                        <li class="services-item" aria-current="page">
+                            <button class="services-item-button1">Доставка</button>
+                        </li>
+                        <li class="services-item">
+                            <button class="services-item-button2">Гарантия</button>
+                        </li>
+                        <li class="services-item">
+                            <button class="services-item-button3">Кредит</button>
+                        </li>
+                    </ul>
+                    <div class="services-container-description">
+                        <div class="services-delivery">
+                            <h3 class="services-delivery-h3">Доставка</h3>
+                            <p class="services-delivery-desc">
+                                Мы с удовольствием доставим ваш товар прямо
+                                к вашему подъезду совершенно бесплатно!
+                                Ведь мы не плохо заработаем,<br>
+                                поднимая его на ваш этаж!
+                            </p>
+                        </div>
+                        <!--
+                        <div class="services-guarantee">
+                            <h3 class="services-guarantee-h3">Гарантия</h3>
+                            <p class="services-guarantee-desc">
+                                Если купленный у нас товар поломается или заискрит,
+                                а также в случае пожара, спровоцированного его
+                                возгоранием, вы всегда можете быть уверены в нашей
+                                гарантии. Мы обменяем сгоревший товар на новый.
+                                Дом уж восстановите как-нибудь сами.
+                            </p>
+                        </div>
+                        <div class="services-credit">
+                            <h3 class="services-credit-h3">Кредит</h3>
+                            <p class="services-credit-desc">
+                                Залезть в долговую яму стало проще!
+                                Кредитные консультанты придут вам на помощь.
+                            </p>
+                            <a class="services-button-credit" href="#">Отправить заявку</a>
+                        </div>
+                        -->
+                    </div>
                 </div>
             </section>
             <section class="info-company-contacts">
@@ -303,45 +309,49 @@
         </main>
         <footer class="footer">
             <section class="footer-up-nav">
-                <h2 class="visually-hidden">Нижнее меню интернет-магазина "Техномарт"</h2>
-                <a href="index.html">
-                    <img class="footer-logo" src="img/logo/logo-technomart-footer.svg" width="138" height="23" alt="Логотип компании Техномарт">
-                </a>
-                <address class="footer-address">
-                    г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-                    +7 (812) 555-05-55
-                </address>
-                <ul class="footer-up-list">
-                    <li class="footer-up-item" aria-current="page">
-                        <a href="#">Компания</a>
-                    </li>
-                    <li class="footer-up-item">
-                        <a href="#">Новости</a>
-                    </li>
-                    <li class="footer-up-item">
-                        <a href="catalog.html">Каталог</a>
-                    </li>
-                    <li class="footer-up-item">
-                        <a href="#">Доставка</a>
-                    </li>
-                    <li class="footer-up-item">
-                        <a href="#">Контакты</a>
-                    </li>
-                </ul>
-                <ul class="footer-down-list">
-                    <li class="footer-down-item">
-                        <a href="#">Материалы</a>
-                    </li>
-                    <li class="footer-down-item">
-                        <a href="#">Техника</a>
-                    </li>
-                    <li class="footer-down-item">
-                        <a href="#">Инструмент</a>
-                    </li>
-                    <li class="footer-down-item">
-                        <a href="#">Спецпредложения</a>
-                    </li>
-                </ul>
+                <div>
+                    <h2 class="visually-hidden">Нижнее меню интернет-магазина "Техномарт"</h2>
+                    <a href="index.html">
+                        <img class="footer-logo" src="img/logo/logo-technomart-footer.svg" width="138" height="23" alt="Логотип компании Техномарт">
+                    </a>
+                    <address class="footer-address">
+                        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+                        +7 (812) 555-05-55
+                    </address>
+                </div>
+                <div>
+                    <ul class="footer-up-list">
+                        <li class="footer-up-item" aria-current="page">
+                            <a href="#">Компания</a>
+                        </li>
+                        <li class="footer-up-item">
+                            <a href="#">Новости</a>
+                        </li>
+                        <li class="footer-up-item">
+                            <a href="catalog.html">Каталог</a>
+                        </li>
+                        <li class="footer-up-item">
+                            <a href="#">Доставка</a>
+                        </li>
+                        <li class="footer-up-item">
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+                    <ul class="footer-down-list">
+                        <li class="footer-down-item">
+                            <a href="#">Материалы</a>
+                        </li>
+                        <li class="footer-down-item">
+                            <a href="#">Техника</a>
+                        </li>
+                        <li class="footer-down-item">
+                            <a href="#">Инструмент</a>
+                        </li>
+                        <li class="footer-down-item">
+                            <a href="#">Спецпредложения</a>
+                        </li>
+                    </ul>
+                </div>
             </section>
             <section class="footer-copyright">
                 <h2 class="visually-hidden">Копирайт и обратная связь</h2>
