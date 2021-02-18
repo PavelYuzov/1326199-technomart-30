@@ -103,51 +103,63 @@
                 <div class="container-catalog">
                     <div class="container-catalog-form">
                         <section class="catalog-form">
-                            <h3 class="catalog-form-h3">Фильтр:</h3>
-                            <form class="catalog-form" action="https://echo.htmlacademy.ru" method="GET">
-                                <div class="catalog-form-slider">
-                                    <fieldset class="catalog-slider-fieldset">
-                                        <legend class="catalog-slider-legend">Цена:</legend>
-                                        <!--Форма ползунка-->
-                                    </fieldset>
-                                </div>
-                                <div class="catalog-form-checkbox">
-                                    <fieldset class="catalog-form-checkbox-fieldset">
-                                        <legend class="catalog-form-checkbox-legend">Производители:</legend>
-                                        <label class="catalog-form-checkbox-label">
-                                            <input class="catalog-form-checkbox-input" type="checkbox" name="BOSCH" checked>BOSCH
-                                            <span class="checkbox"></span>
-                                        </label>
-                                        <label class="catalog-form-checkbox-label">
-                                            <input class="catalog-form-checkbox-input" type="checkbox" name="BOSCH">Интерскол
-                                            <span class="checkbox"></span>
-                                        </label>
-                                        <label class="catalog-form-checkbox-label">
-                                            <input class="catalog-form-checkbox-input" type="checkbox" name="BOSCH" checked>Makita
-                                            <span class="checkbox"></span>
-                                        </label>
-                                        <label class="catalog-form-checkbox-label">
-                                            <input class="catalog-form-checkbox-input" type="checkbox" name="BOSCH">DeWalt
-                                            <span class="checkbox"></span>
-                                        </label>
-                                        <label class="catalog-form-checkbox-label">
-                                            <input class="catalog-form-checkbox-input" type="checkbox" name="BOSCH">Hitachi
-                                            <span class="checkbox"></span>
-                                        </label>
-                                    </fieldset>
-                                    <fieldset class="catalog-form-radio-fieldset">
-                                        <legend class="catalog-form-radio-legend">Питание:</legend>
-                                        <label class="catalog-form-radio-label">
-                                            <input class="catalog-form-radio-input" type="radio" name="type_energy" value="battery" checked>Аккумуляторные
-                                            <span class="radiobutton"></span>
-                                        </label>
-                                        <label class="catalog-form-radio-label">
-                                            <input class="catalog-form-radio-input" type="radio" name="type_energy" value="AC_power">Сетевые
-                                            <span class="radiobutton"></span>
-                                        </label>
-                                    </fieldset>
-                                    <button class="catalog-form-button" type="submit">Показать</button>
-                                </div>
+                            <h3 class="catalog-form__h3">Цена</h3>
+                            <form class="catalog-form__form" action="https://echo.htmlacademy.ru" method="POST">
+                                <fieldset class="catalog-form__slider">
+                                    <legend class="catalog-form__slider-legend">Цена:</legend>
+                                    <div class="range-filter">
+                                        <div class="range-control">
+                                            <div class="scale">
+                                                <div class="bar"></div>
+                                            </div>
+                                            <div class="toggle toggle-min"></div>
+                                            <div class="toggle toggle-max"></div>
+                                        </div>
+                                        <div class="price-control">
+                                            <label class="min-price">
+                                                <input type="number" name="min-price" value="0">
+                                            </label>
+                                            <label class="max-price">
+                                                <input type="number" name="max-price" value="30000">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="catalog-form__fieldset-checkbox">
+                                    <legend class="catalog-form__legend-checkbox">Производители:</legend>
+                                    <label class="catalog-form__label-checkbox option">
+                                        <input class="catalog-form__input" type="checkbox" name="Bosch" checked>Bosch
+                                        <span class="catalog-form__span"></span>
+                                    </label>
+                                    <label class="catalog-form__label-checkbox option">
+                                        <input class="catalog-form__input" type="checkbox" name="Interskol">Interskol
+                                        <span class="catalog-form__span"></span>
+                                    </label>
+                                    <label class="catalog-form__label-checkbox option">
+                                        <input class="catalog-form__input" type="checkbox" name="Makita" checked>Makita
+                                        <span class="catalog-form__span"></span>
+                                    </label>
+                                    <label class="catalog-form__label-checkbox option">
+                                        <input class="catalog-form__input" type="checkbox" name="DeWalt">DeWalt
+                                        <span class="catalog-form__span"></span>
+                                    </label>
+                                    <label class="catalog-form__label-checkbox option">
+                                        <input class="catalog-form__input" type="checkbox" name="Hitachi">Hitachi
+                                        <span class="catalog-form__span"></span>
+                                    </label>
+                                </fieldset>
+                                <fieldset class="catalog-form__fieldset-radio">
+                                    <legend class="catalog-form__legend-radio">Питание:</legend>
+                                    <label class="catalog-form__label-radio option">
+                                        <input class="catalog-form__radio" type="radio"  name="type-energy" value="Battery" checked>Аккумуляторные
+                                        <span class="catalog-form__span-radio"></span>
+                                    </label>
+                                    <label class="catalog-form__label-radio option">
+                                        <input class="catalog-form__radio" type="radio" name="type-energy" value="AC_power">Сетевые
+                                        <span class="catalog-form__span-radio"></span>
+                                    </label>
+                                </fieldset>
+                                <input class="catalog-form__submit" type="submit" value="Показать">
                             </form>
                         </section>
                     </div>
