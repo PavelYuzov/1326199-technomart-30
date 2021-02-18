@@ -1179,7 +1179,7 @@ a {
     line-height: 30px;
     color: var(--basic_black);
     text-transform: uppercase;
-    padding-top: 2px;
+    padding-top: 3px;
     padding-left: 25px;
     padding-bottom: 11px;
     margin: 0;
@@ -1775,6 +1775,7 @@ a {
 .catalog-cards-filter {
     background-color: var(--color_form_pannel);
     width: 700px;
+    margin-left: 1px;
 }
 
 .header-users-login {
@@ -1819,7 +1820,7 @@ a {
 }
 
 .catalog-cards-filter-h3 {
-    padding: 10px 140px 6px 19px;
+    padding: 10px 140px 10px 19px;
     margin: 0;
 }
 
@@ -1857,8 +1858,8 @@ a {
 }
 
 .catalog-cards-filter-prices-down {
-    margin-top: 6px;
-    margin-bottom: 1px;
+    margin-top: 7px;
+    margin-bottom: 2px;
     fill: var(--icon_color);
 }
 
@@ -1874,14 +1875,14 @@ a {
     display: flex;
     padding-left: 0;
     margin: 0;
-    margin-top: 18px;
+    margin-top: 17px;
 }
 
 .catalog-h2 {
     margin: 0;
     margin-top: 17px;
-    padding-top: 29px;
-    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 29px;
     padding-left: 29px;
 }
 
@@ -1899,7 +1900,7 @@ a {
 .cotainer-catalog-cards {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 29px;
+    margin-top: 28px;
     margin-bottom: 27px;
     column-gap: 20px;
 }
@@ -2131,6 +2132,23 @@ a {
     opacity: 1;
 }
 
+.catalog-form {
+    margin-right: 20px;
+    width: 220px;
+}
+
+.catalog-form__h3 {
+    font-family: var(--font-family-PT);
+    font-size: 13px;
+    font-weight: normal;
+    text-transform: uppercase;
+    background-color: var(--color_form_pannel);
+    color: var(--basic_black);
+    padding: 7px 0px 7px 19px;
+    margin: 0;
+    margin-bottom: 17px;
+}
+
 .catalog-form__fieldset-checkbox {
     border: 0;
     padding: 0;
@@ -2147,25 +2165,34 @@ a {
 }
 
 .option {
+    font-family: var(--font-family-PT);
+    font-size: 16px;
+    text-transform: uppercase;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    margin-left: 0;
 }
 
 .option:last-child {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .catalog-form__legend-checkbox,
 .catalog-form__legend-radio {
-    margin-left: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
 }
 
 .catalog-form__label-checkbox,
 .catalog-form__label-radio {
-    padding-left: 30px;
+    font-size: 15px;
+    padding-left: 33px;
     position: relative;
     margin-right: 69px;
+    margin-right: 0;
+}
+
+.catalog-form__fieldset-radio {
+    margin-left: 0;
 }
 
 .catalog-form__input,
@@ -2182,7 +2209,7 @@ a {
     height: 25px;
     background-image: url(../img/mark/checkbox-off.svg);
     background-repeat: no-repeat;
-    left: 0;
+    left: -2px;
 }
 
 .catalog-form__input:checked + .catalog-form__span {
@@ -2220,11 +2247,15 @@ a {
     margin: 0;
     padding: 0;
     border: none;
+    border-bottom: 1px solid var(--icon_color);
+    margin-right: 20px;
+    margin-bottom: 19px;
+    width: 220px;
 }
 
 .range-filter {
     width: 220px;
-    margin-top: 30px;
+    margin-top: 14px;
 }
 
 .catalog-form__slider legend {
@@ -2233,13 +2264,13 @@ a {
 
 .range-control {
     position: relative;
-    height: 40px;
-    background-color: var(--color_footer_nav_down_1);
+    height: 41px;
+    background-color: var(--color_form_pannel);
     padding-top: 39px;
     padding-right: 20px;
     padding-left: 20px;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
 }
 
 .range-control .scale {
@@ -2248,7 +2279,7 @@ a {
 }
 
 .range-control .bar {
-    width: 70%;
+    width: 80%;
     height: 2px;
     background-color: #5FBB2D;
 }
@@ -2267,9 +2298,48 @@ a {
     cursor: pointer;
 }
 .range-control .toggle-min {
-    left: 20px;
+    top: 29px;
+    left: 18px;
 }
 
 .range-control .toggle-max {
-    left: 140px;
+    top: 29px;
+    left: 160px;
+}
+
+.catalog-form__slider-legend {
+    font-family: var(--font-family-PT);
+    font-weight: bold;
+    font-size: 17px;
+    margin: 0;
+}
+
+.price-control {
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+    margin-bottom: 25px;
+}
+
+.min-price input,
+.max-price input {
+    font-family: var(--font-family-PT);
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background-color: var(--color_form_pannel);
+    text-align: center;
+    width: 95px;
+    margin: 0;
+    padding: 10px 0px 9px 0px;
+    border-radius: 3px;
+}
+
+.catalog-form__legend-checkbox {
+    font-family: var(--font-family-PT);
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: -2px;
 }
