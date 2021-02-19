@@ -60,6 +60,7 @@
     --color_rgba_grey: rgba(197, 197, 197, 0.3);
     --color_rgba_black: rgba(169, 169, 169, 0.3);
     --color_rgba_black_border: rgba(0, 0, 0, 0.15);
+    --toogle_background: #ABABAB;
 
     /*Color states*/
     --color_error: #BA2732;
@@ -633,6 +634,11 @@ a {
     right: 16px;
 }
 
+.header-users-login-user:hover::before,
+.header-users-login-user:hover::after {
+    fill: var(--color_basic_grey);
+}
+
 .header-users-login-orders,
 .header-users-login-account {
     font-family: var(--font-family);
@@ -1083,8 +1089,10 @@ a {
 
 .container-index-card {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
     margin-top: 19px;
+    column-gap: 20px;
 }
 
 .manufacturers-link img {
@@ -1101,6 +1109,7 @@ a {
 }
 
 .container-card-link {
+    position: relative;
     font-family: var(--font-family);
     font-size: 14px;
     line-height: 18px;
@@ -1109,6 +1118,17 @@ a {
     text-decoration: none;
     text-transform: uppercase;
     border-bottom: 3px solid var(--color_border_botton);
+}
+
+.container-card-link::before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/mark/icon-cart.svg);
+    background-repeat: no-repeat;
+    top: 10px;
+    left: 25px;
 }
 
 .container-card-button {
@@ -1473,7 +1493,7 @@ a {
 .footer-logo {
     background-color: var(--logo_button_red);
     border-bottom: 5px solid var(--color_border_logo);
-    padding: 20px 41px 20px 41px;
+    padding: 20px 41px 19px 41px;
     margin-bottom: 17px;
 }
 
@@ -2032,12 +2052,20 @@ a {
     font-style: normal;
     font-size: 13px;
     line-height: 18px;
-    border: 1px solid var(--icon_color);
+    border: 1px solid var(--color_border_form_button);
     border-radius: 2px;
     padding: 9px 15px 9px 14px;
     margin: 0;
     margin-right: 11px;
     text-transform: uppercase;
+}
+
+.catalog-pages-item:hover {
+    border: 1px solid var(--icon_color);
+}
+
+.catalog-pages-item:active {
+    border: 1px solid var(--logo_button_red);
 }
 
 .catalog-pages-item:nth-child(2) {
@@ -2083,6 +2111,10 @@ a {
 }
 
 .search-form-input:hover::placeholder {
+    color: var(--basic_white);
+}
+
+.search-form-input:hover::-moz-placeholder {
     color: var(--basic_white);
 }
 
@@ -2152,16 +2184,18 @@ a {
 .catalog-form__fieldset-checkbox {
     border: 0;
     padding: 0;
+    margin: 0;
     margin-right: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 21px;
     border-bottom: 1px solid var(--icon_color);
+    width: 220px;
 }
 
 .catalog-form__fieldset-radio {
     border: 0;
     padding: 0;
     margin-right: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .option {
@@ -2170,25 +2204,34 @@ a {
     text-transform: uppercase;
     display: block;
     margin-bottom: 15px;
-    margin-left: 0;
 }
 
 .option:last-child {
     margin-bottom: 25px;
 }
 
-.catalog-form__legend-checkbox,
-.catalog-form__legend-radio {
+.catalog-form__label-radio {
+    margin-bottom: 19px;
+}
+
+.catalog-form__legend-checkbox {
     margin-bottom: 18px;
+}
+
+.catalog-form__legend-radio {
+    font-family: var(--font-family-PT);
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 24px;
 }
 
 .catalog-form__label-checkbox,
 .catalog-form__label-radio {
     font-size: 15px;
-    padding-left: 33px;
+    padding-left: 34px;
     position: relative;
     margin-right: 69px;
-    margin-right: 0;
 }
 
 .catalog-form__fieldset-radio {
@@ -2209,7 +2252,7 @@ a {
     height: 25px;
     background-image: url(../img/mark/checkbox-off.svg);
     background-repeat: no-repeat;
-    left: -2px;
+    left: 0px;
 }
 
 .catalog-form__input:checked + .catalog-form__span {
@@ -2233,14 +2276,23 @@ a {
     left: 0;
 }
 
+.catalog-form__span-radio:last-child {
+    top: -2px;
+}
+
 .catalog-form__radio:checked + .catalog-form__span-radio {
     background-image: url("../img/mark/radio-on.svg");
     background-repeat: no-repeat;
 }
 
 .catalog-form__submit {
+    font-family: var(--font-family-PT);
+    font-size: 13px;
+    font-weight: normal;
+    text-transform: uppercase;
     border: 1px solid var(--icon_color);
-    padding: 10px 30px 10px 30px;
+    padding: 11px 80px 11px 77px;
+    background-color: var(--basic_white);
 }
 
 .catalog-form__slider {
@@ -2291,8 +2343,8 @@ a {
     width: 4px;
     height: 4px;
     padding: 0;
-    border: 8px solid var(--color_footer_nav_up);
-    background-color: var(--color_nav_black_blue);
+    border: 8px solid var(--basic_white);
+    background-color: var(--toogle_background);
     border-radius: 50%;
     box-shadow: 0 2px 1px 0 var(--icon_color);
     cursor: pointer;
@@ -2325,7 +2377,7 @@ a {
 .max-price input {
     font-family: var(--font-family-PT);
     font-size: 17px;
-    font-weight: bold;
+    font-weight: normal;
     border: none;
     outline: none;
     background-color: var(--color_form_pannel);
@@ -2341,5 +2393,5 @@ a {
     font-size: 17px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-left: -2px;
 }
+
