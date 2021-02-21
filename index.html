@@ -104,11 +104,13 @@
                         <h3 class="slider-h3">Дрели</h3>
                         <p class="slider-p">Соседям на радость!</p>
                     </div>
-                    <!--<button class="slide-back">Предыдущий слайд</button>
-                    <button class="slide-up">Следующий слайд</button>
+                    <button class="slide-back" type="button" aria-label="Предыдущий слайд" tabindex="0"><span class="visually-hidden">Предыдущий слайд</span></button>
+                    <button class="slide-up" type="button" aria-label="Следующий слайд" tabindex="0"><span class="visually-hidden">Предыдущий слайд</span></button>
                     <a class="button-main" href="#">Открыть каталог</a>
-                    <button class="slide-first-pin">Первый слайд</button>
-                    <button class="slide-second-pin">Второй слайд</button>-->
+                    <div class="slider-ball">
+                        <button class="slide-first-pin" type="button" aria-label="Первый слайд"><span class="visually-hidden">Первый слайд</span></button>
+                        <button class="slide-second-pin" type="button" aria-label="Первый слайд"><span class="visually-hidden">Второй слайд</span></button>
+                    </div>
                 </div>
                 <div class="card-sale">
                     <h3 class="card-h3-sale">Скидки 50%</h3>
@@ -125,11 +127,11 @@
                     <a class="button-products" href="#">Все популярные товары</a>
                 </div>
                 <div class="container-index-card">
-                    <div class="container-card">
+                    <div class="container-card" tabindex="0">
                         <img class="container-card-img" src="img/product/B9000.jpg" width="184" height="164" alt="Изображение перфоратора BOSCH BFG 9000">
                         <div class="container-card-buttons">
-                            <a class="container-card-link" href="#">Купить</a>
-                            <button class="container-card-button">В закладки</button>
+                            <a class="container-card-link" href="#" tabindex="0">Купить</a>
+                            <button class="container-card-button" tabindex="0">В закладки</button>
                         </div>
                         <h3 class="container-card-h3">Перфоратор BOSCH BFG 9000</h3>
                         <p class="container-card-old">
@@ -139,11 +141,11 @@
                             25500 Р.
                         </p>
                     </div>
-                    <div class="container-card new-card">
+                    <div class="container-card new-card" tabindex="0">
                         <img class="container-card-img" src="img/product/B3000.jpg" width="127" height="112" alt="Изображение перфоратора BOSCH BFG 3000">
                         <div class="container-card-buttons">
-                            <a class="container-card-link" href="#">Купить</a>
-                            <button class="container-card-button">В закладки</button>
+                            <a class="container-card-link" href="#" tabindex="0">Купить</a>
+                            <button class="container-card-button" tabindex="0">В закладки</button>
                         </div>
                         <h3 class="container-card-h3">Перфоратор BOSCH BFG 3000</h3>
                         <p class="container-card-old">
@@ -153,11 +155,11 @@
                             15500 Р.
                         </p>
                     </div>
-                    <div class="container-card">
+                    <div class="container-card" tabindex="0">
                         <img class="container-card-img" src="img/product/B6000.jpg" width="144" height="128" alt="Изображение перфоратора BOSCH BFG 6000">
                         <div class="container-card-buttons">
-                            <a class="container-card-link" href="#">Купить</a>
-                            <button class="container-card-button">В закладки</button>
+                            <a class="container-card-link" href="#" tabindex="0">Купить</a>
+                            <button class="container-card-button" tabindex="0">В закладки</button>
                         </div>
                         <h3 class="container-card-h3">Перфоратор BOSCH BFG 6000</h3>
                         <p class="container-card-old">
@@ -167,11 +169,11 @@
                             25500 Р.
                         </p>
                     </div>
-                    <div class="container-card new-card">
+                    <div class="container-card new-card" tabindex="0">
                         <img class="container-card-img" src="img/product/B2000.jpg" width="127" height="112" alt="Изображение перфоратора BOSCH BFG 2000">
                         <div class="container-card-buttons">
-                            <a class="container-card-link" href="#">Купить</a>
-                            <button class="container-card-button">В закладки</button>
+                            <a class="container-card-link" href="#" tabindex="0">Купить</a>
+                            <button class="container-card-button" tabindex="0">В закладки</button>
                         </div>
                         <h3 class="container-card-h3">Перфоратор BOSCH BFG 2000</h3>
                         <p class="container-card-old">
@@ -189,96 +191,98 @@
                     <a class="button-manufacturers" href="#">Все производители</a>
                 </div>
                 <ul class="manufacturers-list">
-                    <li class="manufacturers-item" aria-current="page">
-                        <a class="manufacturers-link" href="#">
+                    <li class="manufacturers-item" aria-current="page" tabindex="0">
+                        <a class="manufacturers-link" href="#" tabindex="1">
                             <img src="img/company/bosch.png" width="126" height="37" alt="Логотип компании BOSCH">
                         </a>
                     </li>
-                    <li class="manufacturers-item">
-                        <a class="manufacturers-link" href="#">
+                    <li class="manufacturers-item" tabindex="0">
+                        <a class="manufacturers-link" href="#" tabindex="1">
                             <img src="img/company/makita.png" width="123" height="40" alt="Логотип компании Makita">
                         </a>
                     </li>
-                    <li class="manufacturers-item">
-                        <a class="manufacturers-link" href="#">
+                    <li class="manufacturers-item" tabindex="0">
+                        <a class="manufacturers-link" href="#" tabindex="1">
                             <img src="img/company/dewalt.png" width="146" height="44" alt="Логотип компании DeWalt">
                         </a>
                     </li>
-                    <li class="manufacturers-item">
-                        <a class="manufacturers-link" href="#">
+                    <li class="manufacturers-item" tabindex="0">
+                        <a class="manufacturers-link" href="#" tabindex="1">
                             <img src="img/company/interskol.png" width="200" height="76" alt="Логотип компании Иетерскол">
                         </a>
                     </li>
-                    <li class="manufacturers-item">
-                        <a class="manufacturers-link" href="#">
+                    <li class="manufacturers-item" tabindex="0">
+                        <a class="manufacturers-link" href="#" tabindex="1">
                             <img src="img/company/hitachi.png" width="169" height="31" alt="Логотип компании Hitachi">
                         </a>
                     </li>
-                    <li class="manufacturers-item">
-                        <a class="manufacturers-link" href="#">
+                    <li class="manufacturers-item" tabindex="0">
+                        <a class="manufacturers-link" href="#" tabindex="1">
                             <img src="img/company/lg.png" width="121" height="73" alt="Логотип компании LG">
                         </a>
                     </li>
-                    <li class="manufacturers-item">
-                        <a class="manufacturers-link" href="#">
+                    <li class="manufacturers-item" tabindex="0">
+                        <a class="manufacturers-link" href="#" tabindex="1">
                             <img src="img/company/aeg.png" width="151" height="98" alt="Логотип компании AEG">
                         </a>
                     </li>
-                    <li class="manufacturers-item">
-                        <a class="manufacturers-link" href="#">
+                    <li class="manufacturers-item" tabindex="0">
+                        <a class="manufacturers-link" href="#" tabindex="1">
                             <img src="img/company/metabo.png" width="206" height="73" alt="Логотип компании metabo">
                         </a>
                     </li>
                 </ul>
             </section>
             <section class="services">
-                <h2 class="servicse-h2">Сервисы</h2>
-                <p class="services-description">
-                    Хороший интернет-магазин отличается от плохого не только ценами!
-                    Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-                </p>
-                <div class="services-container">
-                    <ul class="services-list">
-                        <li class="services-item" aria-current="page">
-                            <button class="services-item-button button-active">Доставка</button>
-                        </li>
-                        <li class="services-item">
-                            <button class="services-item-button">Гарантия</button>
-                        </li>
-                        <li class="services-item">
-                            <button class="services-item-button">Кредит</button>
-                        </li>
-                    </ul>
-                    <div class="services-container-description">
-                        <div class="services-delivery">
-                            <h3 class="services-delivery-h3">Доставка</h3>
-                            <p class="services-delivery-desc">
-                                Мы с удовольствием доставим ваш товар прямо
-                                к вашему подъезду совершенно бесплатно!
-                                Ведь мы не плохо заработаем,<br>
-                                поднимая его на ваш этаж!
-                            </p>
+                <div class="container-service">
+                    <h2 class="servicse-h2">Сервисы</h2>
+                    <p class="services-description">
+                        Хороший интернет-магазин отличается от плохого не только ценами!
+                        Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+                    </p>
+                    <div class="services-container">
+                        <ul class="services-list">
+                            <li class="services-item" aria-current="page">
+                                <button class="services-item-button button-active">Доставка</button>
+                            </li>
+                            <li class="services-item">
+                                <button class="services-item-button">Гарантия</button>
+                            </li>
+                            <li class="services-item">
+                                <button class="services-item-button">Кредит</button>
+                            </li>
+                        </ul>
+                        <div class="services-container-description">
+                            <div class="services-delivery">
+                                <h3 class="services-delivery-h3">Доставка</h3>
+                                <p class="services-delivery-desc">
+                                    Мы с удовольствием доставим ваш товар прямо
+                                    к вашему подъезду совершенно бесплатно!
+                                    Ведь мы не плохо заработаем,<br>
+                                    поднимая его на ваш этаж!
+                                </p>
+                            </div>
+                            <!--
+                            <div class="services-guarantee">
+                                <h3 class="services-guarantee-h3">Гарантия</h3>
+                                <p class="services-guarantee-desc">
+                                    Если купленный у нас товар поломается или заискрит,
+                                    а также в случае пожара, спровоцированного его
+                                    возгоранием, вы всегда можете быть уверены в нашей
+                                    гарантии. Мы обменяем сгоревший товар на новый.
+                                    Дом уж восстановите как-нибудь сами.
+                                </p>
+                            </div>
+                            <div class="services-credit">
+                                <h3 class="services-credit-h3">Кредит</h3>
+                                <p class="services-credit-desc">
+                                    Залезть в долговую яму стало проще!
+                                    Кредитные консультанты придут вам на помощь.
+                                </p>
+                                <a class="services-button-credit" href="#">Отправить заявку</a>
+                            </div>
+                            -->
                         </div>
-                        <!--
-                        <div class="services-guarantee">
-                            <h3 class="services-guarantee-h3">Гарантия</h3>
-                            <p class="services-guarantee-desc">
-                                Если купленный у нас товар поломается или заискрит,
-                                а также в случае пожара, спровоцированного его
-                                возгоранием, вы всегда можете быть уверены в нашей
-                                гарантии. Мы обменяем сгоревший товар на новый.
-                                Дом уж восстановите как-нибудь сами.
-                            </p>
-                        </div>
-                        <div class="services-credit">
-                            <h3 class="services-credit-h3">Кредит</h3>
-                            <p class="services-credit-desc">
-                                Залезть в долговую яму стало проще!
-                                Кредитные консультанты придут вам на помощь.
-                            </p>
-                            <a class="services-button-credit" href="#">Отправить заявку</a>
-                        </div>
-                        -->
                     </div>
                 </div>
             </section>
@@ -308,9 +312,39 @@
                         Вы можете забрать товар сами,
                         заехав в наш офис:
                     </p>
-                    <img class="company-map" src="img/mark/map.png" width="300" height="158" alt="Карта с расположением интерент-магазина Техномарт">
+                    <img class="company-map" src="img/mark/map.png" width="300" height="158" alt="Карта с расположением интерент-магазина Техномарт" tabindex="0">
                     <a class="button-help" href="#">Заблудились? Напишите нам!</a>
                 </div>
+                <section class="popup-on popup-off">
+                    <h3 class="visually-hidden">Окно обратной связи</h3>
+                    <div class="container-popup">
+                        <form class="popup-form" action="https://echo.htmlacademy.ru" method="POST">
+                            <div class="container-form-popup">
+                                <label class="popup-form-name">Ваше имя:
+                                    <input class="popup-input-name" type="text" name="Name" aria-labelledby="label-name" aria-required="true" placeholder="Имя Фамилия">
+                                </label>
+                                <label class="popup-form-email">Ваш e-mail:
+                                    <input class="popup-input-email" type="email" name="Email" aria-labelledby="label-email" aria-required="true" placeholder="email@example.com">
+                                </label>
+                            </div>
+                            <div class="container-form-comment">
+                                <label class="popup-form-comment">Текст письма:
+                                    <textarea class="popup-input-comment" name="Comment" rows="6"  cols="62" aria-labelledby="label-name" placeholder="В свободной форме"></textarea>
+                                </label>
+                            </div>
+                            <div class="container-form-button">
+                                <button class="popup-button" type="submit" aria-label="Отправить">Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+                <section class="popup-map-on popup-map-off">
+                    <h3 class="visually-hidden">Карта с расположением магазина</h3>
+                    <div class="container-map">
+                        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323718%2C59.938576&sll=30.324062%2C59.938527&sspn=0.008540%2C0.003187&utm_medium=mapframe&utm_source=maps&z=17" style="color:#eee;font-size:12px;position:absolute;top:14px;">Большая Конюшенная улица, 19/8 — Яндекс.Карты</a><iframe class="map" src="https://yandex.ru/map-widget/v1/-/CCQhfVeoWB" width="943" height="449" style="position:relative;"></iframe></div>
+                        <button class="map__close" type="button" aria-label="Закрыть окно"><svg class="popup__svg" enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z"/></svg></button>
+                    </div>
+                </section>
             </section>
         </main>
         <footer class="footer">
@@ -409,29 +443,6 @@
                     </div>
                 </section>
             </div>
-            <section class="popup-on">
-                <h3 class="visually-hidden">Окно обратной связи</h3>
-                <div class="container-popup">
-                    <form class="popup-form" action="https://echo.htmlacademy.ru" method="POST">
-                        <div class="container-form-popup">
-                            <label class="popup-form-name">Ваше имя:
-                                <input class="popup-input-name" type="text" name="Name" aria-labelledby="label-name" aria-required="true" placeholder="Имя Фамилия">
-                            </label>
-                            <label class="popup-form-email">Ваш e-mail:
-                                <input class="popup-input-email" type="email" name="Email" aria-labelledby="label-email" aria-required="true" placeholder="email@example.com">
-                            </label>
-                        </div>
-                        <div class="container-form-comment">
-                            <label class="popup-form-comment">Текст письма:
-                                <textarea class="popup-input-comment" name="Comment" rows="6"  cols="62" aria-labelledby="label-name" placeholder="В свободной форме"></textarea>
-                            </label>
-                        </div>
-                        <div class="container-form-button">
-                            <button class="popup-button" type="submit" aria-label="Отправить">Отправить</button>
-                        </div>
-                    </form>
-                </div>
-            </section>
         </footer>
     </body>
 </html>
