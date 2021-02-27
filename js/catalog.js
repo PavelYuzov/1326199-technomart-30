@@ -2,6 +2,7 @@ var basket = document.querySelector(".container-card-link");
 var popupcatalog = document.querySelector(".popup-catalog-on");
 var closecatalog = document.querySelector(".popup-close");
 var nextshop = document.querySelector(".catalog-button-purchases");
+var show = document.querySelector(".modal-show");
 
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {  
@@ -17,6 +18,7 @@ basket.addEventListener("click", function (evt) {
     console.log("Клик по ссылке: добавить товар в корзину");
 
     popupcatalog.classList.remove("popup-catalog-off");
+    popupcatalog.classList.add("modal-show");
 });
 
 closecatalog.addEventListener("click", function (evt) {
@@ -25,6 +27,7 @@ closecatalog.addEventListener("click", function (evt) {
     console.log("Клик по крестику: закрыть окно");
 
     popupcatalog.classList.add("popup-catalog-off");
+    popupcatalog.classList.remove("modal-show");
 });
 
 nextshop.addEventListener("click", function (evt) {
@@ -33,4 +36,5 @@ nextshop.addEventListener("click", function (evt) {
     console.log("Клик по кнопке: продолжить покупки");
 
     popupcatalog.classList.add("popup-catalog-off");
+    popupcatalog.classList.remove("modal-show");
 });

@@ -1,8 +1,10 @@
 var popupopen = document.querySelector(".button-help");
 var popupoff = document.querySelector(".popup-off");
 var popupclose = document.querySelector(".popup-close");
+var popupcloseindex = document.querySelector(".popup-close-index");
 var popupindex = document.querySelector(".popup-on");
 var form = popupindex.querySelector("form");
+var submitform = popupindex.querySelector(".popup-button");
 var login = document.querySelector("[name=name]");
 var email = document.querySelector("[name=email]");
 var text = document.querySelector("[name=comment]");
@@ -20,6 +22,21 @@ var hidden = document.querySelector(".visually-hidden");
 var openmap = document.querySelector(".company-map");
 var popupmap = document.querySelector(".popup-map-on");
 var mapclose = document.querySelector(".map-close");
+var show = document.querySelector(".modal-show");
+var error = document.querySelector(".modal-error");
+var bgperfo = document.querySelector(".card-slider-perfo");
+var bgdrill = document.querySelector(".card-slider-drill");
+var textperfo = document.querySelector(".card-slider-slide1");
+var textdrill = document.querySelector(".card-slider-slide2");
+var next = document.querySelector(".slide-up");
+var back = document.querySelector(".slide-back");
+var pin1 = document.querySelector(".slide-first-pin-off");
+var pin2 = document.querySelector(".slide-second-pin-on");
+var basket = document.querySelector(".container-card-link");
+var popupcatalog = document.querySelector(".popup-catalog-on");
+var closecatalog = document.querySelector(".popup-close");
+var nextshop = document.querySelector(".catalog-button-purchases");
+var show = document.querySelector(".modal-show");
 
 var isStorageSupport = true;
 var storage = "";
@@ -52,6 +69,7 @@ popupopen.addEventListener("click", function (evt) {
     console.log("Открыть окно обратной формы");
 
     popupindex.classList.remove("popup-off");
+    popupindex.classList.add("modal-show");
     login.focus();
 
     if (storage) {
@@ -62,19 +80,20 @@ popupopen.addEventListener("click", function (evt) {
     }
 });
 
-popupclose.addEventListener("click", function (evt) {
+popupcloseindex.addEventListener("click", function (evt) {
 
     evt.preventDefault();
     console.log("Закрыть окно обратной формы");
 
     popupindex.classList.add("popup-off");
+    popupindex.classList.remove("modal-show");
 });
 
 form.addEventListener("submit", function (evt) {
 
     if (!login.value || !email.value || !text.value) {
     evt.preventDefault();
-    console.log("Нужно заполнить все поля");
+    popupindex.classList.add("modal-error");
     } else {
         if (isStorageSupport) {
             localStorage.setItem("login", login.value);
@@ -142,4 +161,57 @@ mapclose.addEventListener("click", function(evt) {
     evt.preventDefault();
 
     popupmap.classList.add("visually-hidden");
+});
+
+next.addEventListener("click", function(evt) {
+    evt.preventDefault();
+
+    bgperfo.classList.toggle("card-slider-drill");
+    bgperfo.classList.toggle("card-slider-perfo");
+
+    textperfo.classList.toggle("visually-hidden");
+    textdrill.classList.toggle("visually-hidden");
+
+    pin1.classList.toggle("slide-first-pin-off");
+    pin2.classList.toggle("slide-second-pin-on");
+});
+
+back.addEventListener("click", function(evt) {
+    evt.preventDefault();
+
+    bgperfo.classList.toggle("card-slider-drill");
+    bgperfo.classList.toggle("card-slider-perfo");
+
+    textperfo.classList.toggle("visually-hidden");
+    textdrill.classList.toggle("visually-hidden");
+
+    pin1.classList.toggle("slide-first-pin-off");
+    pin2.classList.toggle("slide-second-pin-on");
+});
+
+basket.addEventListener("click", function (evt) {
+
+    evt.preventDefault ();
+    console.log("Клик по ссылке: добавить товар в корзину");
+
+    popupcatalog.classList.remove("popup-catalog-off");
+    popupcatalog.classList.add("modal-show");
+});
+
+closecatalog.addEventListener("click", function (evt) {
+
+    evt.preventDefault ();
+    console.log("Клик по крестику: закрыть окно");
+
+    popupcatalog.classList.add("popup-catalog-off");
+    popupcatalog.classList.remove("modal-show");
+});
+
+nextshop.addEventListener("click", function (evt) {
+
+    evt.preventDefault ();
+    console.log("Клик по кнопке: продолжить покупки");
+
+    popupcatalog.classList.add("popup-catalog-off");
+    popupcatalog.classList.remove("modal-show");
 });

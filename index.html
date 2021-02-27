@@ -100,7 +100,7 @@
                         <h3 class="slider-h3">Перфораторы</h3>
                         <p class="slider-p">Настоящие мужские игрушки</p>
                     </div>
-                    <div class="card-slider-slide2 promo-none">
+                    <div class="card-slider-slide2 visually-hidden">
                         <h3 class="slider-h3">Дрели</h3>
                         <p class="slider-p">Соседям на радость!</p>
                     </div>
@@ -108,8 +108,8 @@
                     <button class="slide-up" type="button" aria-label="Следующий слайд" tabindex="0"><span class="visually-hidden">Предыдущий слайд</span></button>
                     <a class="button-main" href="catalog.html">Открыть каталог</a>
                     <div class="slider-ball">
-                        <button class="slide-first-pin" type="button" aria-label="Первый слайд"><span class="visually-hidden">Первый слайд</span></button>
-                        <button class="slide-second-pin" type="button" aria-label="Первый слайд"><span class="visually-hidden">Второй слайд</span></button>
+                        <button class="slide-first-pin slide-first-pin-off" type="button" aria-label="Первый слайд"><span class="visually-hidden">Первый слайд</span></button>
+                        <button class="slide-second-pin slide-second-pin-on" type="button" aria-label="Первый слайд"><span class="visually-hidden">Второй слайд</span></button>
                     </div>
                 </div>
                 <div class="card-sale">
@@ -323,30 +323,6 @@
                     <img class="company-map" src="img/mark/map.png" width="300" height="158" alt="Карта с расположением интерент-магазина Техномарт">
                     <a class="button-help" href="#">Заблудились? Напишите нам!</a>
                 </div>
-                <section class="popup-on popup-off">
-                    <h3 class="visually-hidden">Окно обратной связи</h3>
-                    <button class="popup-close" type="button" aria-label="Закрыть окно"><svg class="popup-svg" enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z"/></svg></button>
-                    <div class="container-popup">
-                        <form class="popup-form" action="https://echo.htmlacademy.ru" method="POST">
-                            <div class="container-form-popup">
-                                <label class="popup-form-name">Ваше имя:
-                                    <input class="popup-input-name" type="text" name="name" aria-label="label-name" aria-required="true" placeholder="Имя Фамилия" required>
-                                </label>
-                                <label class="popup-form-email">Ваш e-mail:
-                                    <input class="popup-input-email" type="email" name="email" aria-label="label-email" aria-required="true" placeholder="email@example.com" required>
-                                </label>
-                            </div>
-                            <div class="container-form-comment">
-                                <label class="popup-form-comment">Текст письма:
-                                    <textarea class="popup-input-comment" name="comment" rows="6"  cols="62" aria-label="label-text" placeholder="В свободной форме" required></textarea>
-                                </label>
-                            </div>
-                            <div class="container-form-button">
-                                <button class="popup-button" type="submit" aria-label="Отправить">Отправить</button>
-                            </div>
-                        </form>
-                    </div>
-                </section>
                 <section class="popup-map-on visually-hidden">
                     <h3 class="visually-hidden">Карта с расположением магазина</h3>
                     <div class="container-map">
@@ -354,6 +330,30 @@
                         <button class="map-close" type="button" aria-label="Закрыть окно"><svg class="popup-svg" enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z"/></svg></button>
                     </div>
                 </section>
+            </section>
+            <section class="popup-on popup-off">
+                <h3 class="visually-hidden">Окно обратной связи</h3>
+                <button class="popup-close-index" type="button" aria-label="Закрыть окно"><svg class="popup-svg" enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z"/></svg></button>
+                <div class="container-popup">
+                    <form class="popup-form" action="https://echo.htmlacademy.ru" method="POST">
+                        <div class="container-form-popup">
+                            <label class="popup-form-name">Ваше имя:
+                                <input class="popup-input-name" type="text" name="name" aria-label="label-name" aria-required="true" placeholder="Имя Фамилия" required>
+                            </label>
+                            <label class="popup-form-email">Ваш e-mail:
+                                <input class="popup-input-email" type="email" name="email" aria-label="label-email" aria-required="true" placeholder="email@example.com" required>
+                            </label>
+                        </div>
+                        <div class="container-form-comment">
+                            <label class="popup-form-comment">Текст письма:
+                                <textarea class="popup-input-comment" name="comment" rows="6"  cols="62" aria-label="label-text" placeholder="В свободной форме" required></textarea>
+                            </label>
+                        </div>
+                        <div class="container-form-button">
+                            <button class="popup-button" type="submit" aria-label="Отправить">Отправить</button>
+                        </div>
+                    </form>
+                </div>
             </section>
         </main>
         <footer class="footer">

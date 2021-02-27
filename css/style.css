@@ -857,12 +857,26 @@ a {
 }
 
 .slide-first-pin,
+.slide-first-pin-off,
+.slide-second-pin-on,
 .slide-second-pin {
     border: none;
     padding: 0;
 }
 
-.slide-first-pin::before {
+.slide-first-pin {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-image: url(../img/mark/pin-on.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    top: 92px;
+    left: 295px;
+    position: absolute;
+}
+
+.slide-first-pin-off {
     content: "";
     width: 10px;
     height: 10px;
@@ -874,7 +888,19 @@ a {
     position: absolute;
 }
 
-.slide-second-pin::after {
+.slide-second-pin {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-image: url(../img/mark/pin-off.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    top: 92px;
+    right: 295px;
+    position: absolute;
+}
+
+.slide-second-pin-on {
     content: "";
     width: 10px;
     height: 10px;
@@ -1309,7 +1335,7 @@ a {
 .container-service {
     margin: 0 auto;
     width: 940px;
-    margin-top: 71px;
+    margin-top: 72px;
 }
 
 .servicse-h2 {
@@ -1516,7 +1542,7 @@ a {
 }
 
 .info-company {
-    margin-top: 41px;
+    margin-top: 42px;
     margin-right: 179px;
 }
 
@@ -1535,7 +1561,7 @@ a {
 }
 
 .contacts-company-h3 {
-    margin-top: 71px;
+    margin-top: 72px;
     margin-bottom: 23px;
 }
 
@@ -1663,7 +1689,7 @@ a {
 .footer-logo {
     background-color: var(--logo_button_red);
     border-bottom: 5px solid var(--color_border_logo);
-    padding: 19px 41px 20px 41px;
+    padding: 20px 41px 20px 41px;
 }
 
 .footer-address {
@@ -1758,9 +1784,9 @@ a {
 .footer-development-connection {
     font-family: var(--font-family);
     font-size: 16px;
-    line-height: 16px;
+    line-height: 14px;
     color: var(--basic_white);
-    margin-top: 35px;
+    margin-top: 37px;
     margin-bottom: 0;
 }
 
@@ -1768,7 +1794,7 @@ a {
 .footer-development-connection-link {
     font-family: var(--font-family);
     font-size: 16px;
-    line-height: 18px;
+    line-height: 15px;
     color: var(--color_footer_nav_down_1);
     text-decoration: none;
     margin-bottom: 33px;
@@ -1820,15 +1846,19 @@ a {
     cursor: pointer;
 }
 
-.footer-social-item1 svg,
+.footer-social-item1 svg {
+    padding-top: 8px;
+    padding-left: 1px;
+}
+
 .footer-social-item2 svg {
-    padding-top: 5px;
+    padding-top: 8px;
     padding-left: 0px;
 }
 
 .footer-social-item3 svg {
-    padding-top: 5px;
-    padding-left: 0px;
+    padding-top: 7px;
+    padding-right: 1px;
 }
 
 .footer-social-item1:hover,
@@ -2038,7 +2068,7 @@ a {
 }
 
 .catalog-cards-filter-prices-up {
-    margin-top: 6px;
+    margin-top: 7px;
     margin-right: 21px;
     margin-bottom: 1px;
     fill: var(--logo_button_red);
@@ -2095,7 +2125,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     margin-top: 28px;
-    margin-bottom: 27px;
+    margin-bottom: 30px;
     margin-right: -20px;
 }
 
@@ -2170,8 +2200,8 @@ a {
     padding-left: 32px;
     margin-top: 0;
     margin-right: 34px;
-    margin-bottom: 21px;
-    margin-left: 45px;
+    margin-bottom: 20px;
+    margin-left: 44px;
 }
 
 .container-card-img {
@@ -2229,10 +2259,14 @@ a {
     line-height: 18px;
     border: 1px solid var(--color_border_form_button);
     border-radius: 2px;
-    padding: 9px 15px 9px 14px;
+    padding: 9px 14px 9px 14px;
     margin: 0;
     margin-right: 11px;
     text-transform: uppercase;
+}
+
+.catalog-pages-item:first-child {
+    padding-right: 17px;
 }
 
 .catalog-pages-item:hover {
@@ -2360,7 +2394,7 @@ a {
     text-transform: uppercase;
     background-color: var(--color_form_pannel);
     color: var(--basic_black);
-    padding: 7px 0px 7px 19px;
+    padding: 7px 0px 7px 18px;
     margin: 0;
     margin-bottom: 17px;
 }
@@ -2413,7 +2447,7 @@ a {
 .catalog-form__label-checkbox,
 .catalog-form__label-radio {
     font-size: 15px;
-    padding-left: 34px;
+    padding-left: 35px;
     position: relative;
     margin-right: 69px;
 }
@@ -2632,6 +2666,10 @@ a {
     border-radius: 3px;
 }
 
+.min-price input {
+    margin-right: 3px;
+}
+
 .catalog-form__legend-checkbox {
     font-family: var(--font-family-PT);
     font-size: 17px;
@@ -2640,15 +2678,15 @@ a {
 }
 
 .popup-on {
-    position: absolute;
-    margin: auto;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 620px;
     background-color: var(--basic_white);
     border-top: 7px solid var(--logo_button_red);
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
     display: block;
-    animation-name: bounce;
-    animation-duration: 0.6s;
 }
 
 .popup-off {
@@ -2762,8 +2800,6 @@ a {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     text-align: center;
     display: block;
-    animation-name: bounce;
-    animation-duration: 0.6s;
     z-index: 2;
 }
 
@@ -2791,6 +2827,16 @@ a {
 }
 
 .popup-close {
+    list-style: none;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.popup-close-index {
     list-style: none;
     border: none;
     background-color: transparent;
@@ -2868,9 +2914,25 @@ a {
     display: none;
 }
 
+.modal-show {
+    animation-name: bounce;
+    animation-duration: 0.6s;
+}
+
 @keyframes bounce {
-    0% {transform: translateY(-2000px); }
+    0% {transform: translateY(-2000px);}
     70% {transform: translateY(30px);}
     90% {transform: translateY(-10px);}
     100% {transform: translateY(0px);}
+}
+
+.modal-error {
+    animation-name: shake;
+    animation-direction: 0.6s;
+}
+
+@keyframes shake {
+    0%, 100% {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+    20%, 40%, 60%, 80% {transform: translateX(10px);}
 }
