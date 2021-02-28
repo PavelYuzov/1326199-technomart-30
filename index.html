@@ -323,13 +323,13 @@
                     <img class="company-map" src="img/mark/map.png" width="300" height="158" alt="Карта с расположением интерент-магазина Техномарт">
                     <a class="button-help" href="#">Заблудились? Напишите нам!</a>
                 </div>
-                <section class="popup-map-on visually-hidden">
-                    <h3 class="visually-hidden">Карта с расположением магазина</h3>
-                    <div class="container-map">
-                        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323718%2C59.938576&sll=30.324062%2C59.938527&sspn=0.008540%2C0.003187&utm_medium=mapframe&utm_source=maps&z=17" style="color:#eee;font-size:12px;position:absolute;top:14px;">Большая Конюшенная улица, 19/8 — Яндекс.Карты</a><iframe class="map" src="https://yandex.ru/map-widget/v1/-/CCQhfVeoWB" width="943" height="449" style="position:relative;border:none;"></iframe></div>
-                        <button class="map-close" type="button" aria-label="Закрыть окно"><svg class="popup-svg" enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z"/></svg></button>
-                    </div>
-                </section>
+            </section>
+            <section class="popup-map-on visually-hidden">
+                <h3 class="visually-hidden">Карта с расположением магазина</h3>
+                <div class="container-map">
+                    <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323718%2C59.938576&sll=30.324062%2C59.938527&sspn=0.008540%2C0.003187&utm_medium=mapframe&utm_source=maps&z=17" style="color:#eee;font-size:12px;position:absolute;top:14px;">Большая Конюшенная улица, 19/8 — Яндекс.Карты</a><iframe class="map" src="https://yandex.ru/map-widget/v1/-/CCQhfVeoWB" width="943" height="449" style="position:relative;border:none;"></iframe></div>
+                    <button class="map-close" type="button" aria-label="Закрыть окно"><svg class="popup-svg" enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z"/></svg></button>
+                </div>
             </section>
             <section class="popup-on popup-off">
                 <h3 class="visually-hidden">Окно обратной связи</h3>
@@ -338,15 +338,15 @@
                     <form class="popup-form" action="https://echo.htmlacademy.ru" method="POST">
                         <div class="container-form-popup">
                             <label class="popup-form-name">Ваше имя:
-                                <input class="popup-input-name" type="text" name="name" aria-label="label-name" aria-required="true" placeholder="Имя Фамилия" required>
+                                <input class="popup-input-name" type="text" name="login" aria-label="label-name" aria-required="true" placeholder="Имя Фамилия">
                             </label>
                             <label class="popup-form-email">Ваш e-mail:
-                                <input class="popup-input-email" type="email" name="email" aria-label="label-email" aria-required="true" placeholder="email@example.com" required>
+                                <input class="popup-input-email" type="email" name="email" aria-label="label-email" aria-required="true" placeholder="email@example.com">
                             </label>
                         </div>
                         <div class="container-form-comment">
                             <label class="popup-form-comment">Текст письма:
-                                <textarea class="popup-input-comment" name="comment" rows="6"  cols="62" aria-label="label-text" placeholder="В свободной форме" required></textarea>
+                                <textarea class="popup-input-comment" name="comment" rows="6"  cols="62" aria-label="label-text" placeholder="В свободной форме"></textarea>
                             </label>
                         </div>
                         <div class="container-form-button">

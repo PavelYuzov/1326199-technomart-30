@@ -288,7 +288,8 @@ a {
 .services-button-credit:hover,
 .info-button:hover,
 .button-help:hover,
-.button-main:hover {
+.button-main:hover,
+.popup-button:hover {
     background-color: var(--color_button_states_red);
 }
 
@@ -297,7 +298,8 @@ a {
 .services-button-credit:active,
 .info-button:active,
 .button-help:active,
-.button-main:active {
+.button-main:active,
+.popup-button:active {
     background-color: var(--color_error);
 }
 
@@ -2680,13 +2682,14 @@ a {
 .popup-on {
     position: fixed;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 25%;
+    margin-left: -310px;
     width: 620px;
     background-color: var(--basic_white);
     border-top: 7px solid var(--logo_button_red);
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-    display: block;
+    animation-name: bounce;
+    animation-duration: 0.6s;
 }
 
 .popup-off {
@@ -2694,8 +2697,14 @@ a {
 }
 
 .popup-map-on {
-    position: absolute;
+    position: fixed;
+    top: 17%;
+    left: 50%;
+    margin-left: -471px;
     border-top: 7px solid var(--logo_button_red);
+    display: block;
+    animation-name: bounce;
+    animation-duration: 0.6s;
 }
 
 .container-map {
@@ -2801,6 +2810,8 @@ a {
     text-align: center;
     display: block;
     z-index: 2;
+    animation-name: bounce;
+    animation-duration: 0.6s;
 }
 
 .popup-catalog-off {

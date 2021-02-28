@@ -5,9 +5,9 @@ var popupcloseindex = document.querySelector(".popup-close-index");
 var popupindex = document.querySelector(".popup-on");
 var form = popupindex.querySelector("form");
 var submitform = popupindex.querySelector(".popup-button");
-var login = document.querySelector("[name=name]");
-var email = document.querySelector("[name=email]");
-var text = document.querySelector("[name=comment]");
+var login = popupindex.querySelector("[name=login]");
+var email = popupindex.querySelector("[name=email]");
+var comment = popupindex.querySelector("[name=comment]"); 
 var storage = localStorage.getItem("login");
 var active = document.querySelector(".button-active");
 var button1 = document.querySelector(".services-item-button-description");
@@ -32,11 +32,10 @@ var next = document.querySelector(".slide-up");
 var back = document.querySelector(".slide-back");
 var pin1 = document.querySelector(".slide-first-pin-off");
 var pin2 = document.querySelector(".slide-second-pin-on");
-var basket = document.querySelector(".container-card-link");
+var basketbutton = document.querySelectorAll(".container-card-link");
 var popupcatalog = document.querySelector(".popup-catalog-on");
 var closecatalog = document.querySelector(".popup-close");
 var nextshop = document.querySelector(".catalog-button-purchases");
-var show = document.querySelector(".modal-show");
 
 var isStorageSupport = true;
 var storage = "";
@@ -63,14 +62,18 @@ window.addEventListener("keydown", function (evt) {
     }
 });
 
-popupopen.addEventListener("click", function (evt) {
+window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {  
+        if (popupcatalog.classList.add("popup-catalog-off")) {
+            evt.preventDefault ();
+        }
+    }
+});
 
+popupopen.addEventListener("click", function (evt) {
     evt.preventDefault();
-    console.log("Открыть окно обратной формы");
 
     popupindex.classList.remove("popup-off");
-    popupindex.classList.add("modal-show");
-    login.focus();
 
     if (storage) {
         login.value = storage;
@@ -80,26 +83,28 @@ popupopen.addEventListener("click", function (evt) {
     }
 });
 
+form.addEventListener("submit", function (evt) {
+    if (!login.value || !email.value || !comment.value) {
+        evt.preventDefault();
+        popupindex.classList.remove("modal-error");
+        popupindex.offsetWidth = popupindex.offsetWidth;
+        popupindex.classList.add("modal-error");
+        
+    } else {
+        if (isStorageSupport) {
+        localStorage.setItem("login", login.value);
+        localStorage.setItem("email", email.value);
+        localStorage.setItem("comment", comment.value);
+        }
+    }
+});
+
 popupcloseindex.addEventListener("click", function (evt) {
 
     evt.preventDefault();
     console.log("Закрыть окно обратной формы");
 
     popupindex.classList.add("popup-off");
-    popupindex.classList.remove("modal-show");
-});
-
-form.addEventListener("submit", function (evt) {
-
-    if (!login.value || !email.value || !text.value) {
-    evt.preventDefault();
-    popupindex.classList.add("modal-error");
-    } else {
-        if (isStorageSupport) {
-            localStorage.setItem("login", login.value);
-        }
-    }
-
 });
 
 services[0].addEventListener("click", function(evt) {
@@ -189,22 +194,12 @@ back.addEventListener("click", function(evt) {
     pin2.classList.toggle("slide-second-pin-on");
 });
 
-basket.addEventListener("click", function (evt) {
-
-    evt.preventDefault ();
-    console.log("Клик по ссылке: добавить товар в корзину");
-
-    popupcatalog.classList.remove("popup-catalog-off");
-    popupcatalog.classList.add("modal-show");
-});
-
 closecatalog.addEventListener("click", function (evt) {
 
     evt.preventDefault ();
     console.log("Клик по крестику: закрыть окно");
 
     popupcatalog.classList.add("popup-catalog-off");
-    popupcatalog.classList.remove("modal-show");
 });
 
 nextshop.addEventListener("click", function (evt) {
@@ -213,5 +208,11 @@ nextshop.addEventListener("click", function (evt) {
     console.log("Клик по кнопке: продолжить покупки");
 
     popupcatalog.classList.add("popup-catalog-off");
-    popupcatalog.classList.remove("modal-show");
+});
+
+basketbutton.forEach((button) => {
+    button.addEventListener("click", (evt) => {
+        evt.preventDefault();
+        popupcatalog.classList.remove("popup-catalog-off");
+    });
 });
