@@ -1,41 +1,33 @@
-var popupopen = document.querySelector(".button-help");
-var popupoff = document.querySelector(".popup-off");
-var popupclose = document.querySelector(".popup-close");
-var popupcloseindex = document.querySelector(".popup-close-index");
-var popupindex = document.querySelector(".popup-on");
-var form = popupindex.querySelector("form");
-var submitform = popupindex.querySelector(".popup-button");
-var login = popupindex.querySelector("[name=login]");
-var email = popupindex.querySelector("[name=email]");
-var comment = popupindex.querySelector("[name=comment]"); 
+const linkOpenForm = document.querySelector(".button-help");
+const closeForm = document.querySelector(".popup-off");
+const iconClosePopup = document.querySelector(".popup-close-index");
+const openForm = document.querySelector(".popup-on");
+const form = openForm.querySelector("form");
+const login = openForm.querySelector("[name=login]");
+const email = openForm.querySelector("[name=email]");
+const comment = openForm.querySelector("[name=comment]"); 
 var storage = localStorage.getItem("login");
-var active = document.querySelector(".button-active");
-var button1 = document.querySelector(".services-item-button-description");
-var button2 = document.querySelector(".services-item-button-guarantee");
-var button3 = document.querySelector(".services-item-button-credit");
-var services = document.querySelectorAll(".services-item");
-var servicesbutton = document.querySelectorAll(".services-item");
-var delivery = document.querySelector(".services-delivery");
-var guarantee = document.querySelector(".services-guarantee");
-var credit = document.querySelector(".services-credit");
-var hidden = document.querySelector(".visually-hidden");
-var openmap = document.querySelector(".company-map");
-var popupmap = document.querySelector(".popup-map-on");
-var mapclose = document.querySelector(".map-close");
-var show = document.querySelector(".modal-show");
-var error = document.querySelector(".modal-error");
-var bgperfo = document.querySelector(".card-slider-perfo");
-var bgdrill = document.querySelector(".card-slider-drill");
-var textperfo = document.querySelector(".card-slider-slide1");
-var textdrill = document.querySelector(".card-slider-slide2");
-var next = document.querySelector(".slide-up");
-var back = document.querySelector(".slide-back");
-var pin1 = document.querySelector(".slide-first-pin-off");
-var pin2 = document.querySelector(".slide-second-pin-on");
-var basketbutton = document.querySelectorAll(".container-card-link");
-var popupcatalog = document.querySelector(".popup-catalog-on");
-var closecatalog = document.querySelector(".popup-close");
-var nextshop = document.querySelector(".catalog-button-purchases");
+const activeButton = document.querySelector(".button-active");
+const hide = document.querySelector(".visually-hidden");
+const linkOpenMap = document.querySelector(".company-map");
+const openPopupMap = document.querySelector(".popup-map-on");
+const iconCloseMap = document.querySelector(".map-close");
+const modalShow = document.querySelector(".modal-show");
+const modalError = document.querySelector(".modal-error");
+const slidePerforator = document.querySelector(".card-slider-perfo");
+const sliderdrill = document.querySelector(".card-slider-drill");
+const infoSlidePerforato = document.querySelector(".card-slider-slide1");
+const infoSlideDrill = document.querySelector(".card-slider-slide2");
+const nextSlide = document.querySelector(".slide-up");
+const backSlide = document.querySelector(".slide-back");
+const nextSlidePin = document.querySelector(".slide-first-pin-off");
+const backSlidePin = document.querySelector(".slide-second-pin-on");
+const linkBuyProduct = document.querySelectorAll(".container-card-link");
+const popupPurchases = document.querySelector(".popup-catalog-on");
+const iconClosePopupPurchases = document.querySelector(".popup-close");
+const linkResumePurchases = document.querySelector(".catalog-button-purchases");
+const buttons = document.querySelectorAll(".services-item-button");
+const buttonsInfo = document.querySelectorAll(".services-container-description div");
 
 var isStorageSupport = true;
 var storage = "";
@@ -48,7 +40,16 @@ try{
 
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {  
-        if (popupoff.classList.add("popup-off")) {
+        if (closeForm.classList.add("popup-off")) {
+            evt.preventDefault ();
+            openForm.classList.remove("modal-error");
+        }
+    }
+});
+
+window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {  
+        if (openPopupMap.classList.add("visually-hidden")) {
             evt.preventDefault ();
         }
     }
@@ -56,24 +57,17 @@ window.addEventListener("keydown", function (evt) {
 
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {  
-        if (popupmap.classList.add("visually-hidden")) {
+        if (popupPurchases.classList.add("popup-catalog-off")) {
             evt.preventDefault ();
         }
     }
 });
 
-window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {  
-        if (popupcatalog.classList.add("popup-catalog-off")) {
-            evt.preventDefault ();
-        }
-    }
-});
-
-popupopen.addEventListener("click", function (evt) {
+linkOpenForm.addEventListener("click", function (evt) {
     evt.preventDefault();
 
-    popupindex.classList.remove("popup-off");
+    openForm.classList.remove("popup-off");
+    openForm.classList.remove("modal-error");
 
     if (storage) {
         login.value = storage;
@@ -86,10 +80,9 @@ popupopen.addEventListener("click", function (evt) {
 form.addEventListener("submit", function (evt) {
     if (!login.value || !email.value || !comment.value) {
         evt.preventDefault();
-        popupindex.classList.remove("modal-error");
-        popupindex.offsetWidth = popupindex.offsetWidth;
-        popupindex.classList.add("modal-error");
-        
+        openForm.classList.remove("modal-error");
+        openForm.offsetWidth = openForm.offsetWidth;
+        openForm.classList.add("modal-error");
     } else {
         if (isStorageSupport) {
         localStorage.setItem("login", login.value);
@@ -99,120 +92,89 @@ form.addEventListener("submit", function (evt) {
     }
 });
 
-popupcloseindex.addEventListener("click", function (evt) {
+iconClosePopup.addEventListener("click", function (evt) {
 
     evt.preventDefault();
     console.log("Закрыть окно обратной формы");
 
-    popupindex.classList.add("popup-off");
+    openForm.classList.add("popup-off");
+    openForm.classList.remove("modal-error");
 });
 
-services[0].addEventListener("click", function(evt) {
+linkOpenMap.addEventListener("click", function(evt) {
     evt.preventDefault();
 
-    delivery.classList.remove("visually-hidden");
-    guarantee.classList.add("visually-hidden");
-    credit.classList.add("visually-hidden");
+    openPopupMap.classList.remove("visually-hidden");
+    openPopupMap.classList.add("modal-show");
 });
 
-services[1].addEventListener("click", function(evt) {
+
+iconCloseMap.addEventListener("click", function(evt) {
     evt.preventDefault();
 
-    delivery.classList.add("visually-hidden");
-    guarantee.classList.remove("visually-hidden");
-    credit.classList.add("visually-hidden");
+    openPopupMap.classList.add("visually-hidden");
+    openPopupMap.classList.remove("modal-show");
 });
 
-services[2].addEventListener("click", function(evt) {
+nextSlide.addEventListener("click", function(evt) {
     evt.preventDefault();
 
-    delivery.classList.add("visually-hidden");
-    guarantee.classList.add("visually-hidden");
-    credit.classList.remove("visually-hidden");
+    slidePerforator.classList.toggle("card-slider-drill");
+    slidePerforator.classList.toggle("card-slider-perfo");
+
+    infoSlidePerforato.classList.toggle("visually-hidden");
+    infoSlideDrill.classList.toggle("visually-hidden");
+
+    nextSlidePin.classList.toggle("slide-first-pin-off");
+    backSlidePin.classList.toggle("slide-second-pin-on");
 });
 
-servicesbutton[0].addEventListener("click", function(evt) {
+backSlide.addEventListener("click", function(evt) {
     evt.preventDefault();
 
-    button1.classList.add("button-active");
-    button2.classList.remove("button-active");
-    button3.classList.remove("button-active");
+    slidePerforator.classList.toggle("card-slider-drill");
+    slidePerforator.classList.toggle("card-slider-perfo");
+
+    infoSlidePerforato.classList.toggle("visually-hidden");
+    infoSlideDrill.classList.toggle("visually-hidden");
+
+    nextSlidePin.classList.toggle("slide-first-pin-off");
+    backSlidePin.classList.toggle("slide-second-pin-on");
 });
 
-servicesbutton[1].addEventListener("click", function(evt) {
-    evt.preventDefault();
-
-    button1.classList.remove("button-active");
-    button2.classList.add("button-active");
-    button3.classList.remove("button-active");
-});
-
-servicesbutton[2].addEventListener("click", function(evt) {
-    evt.preventDefault();
-
-    button1.classList.remove("button-active");
-    button2.classList.remove("button-active");
-    button3.classList.add("button-active");
-});
-
-openmap.addEventListener("click", function(evt) {
-    evt.preventDefault();
-
-    popupmap.classList.remove("visually-hidden");
-});
-
-
-mapclose.addEventListener("click", function(evt) {
-    evt.preventDefault();
-
-    popupmap.classList.add("visually-hidden");
-});
-
-next.addEventListener("click", function(evt) {
-    evt.preventDefault();
-
-    bgperfo.classList.toggle("card-slider-drill");
-    bgperfo.classList.toggle("card-slider-perfo");
-
-    textperfo.classList.toggle("visually-hidden");
-    textdrill.classList.toggle("visually-hidden");
-
-    pin1.classList.toggle("slide-first-pin-off");
-    pin2.classList.toggle("slide-second-pin-on");
-});
-
-back.addEventListener("click", function(evt) {
-    evt.preventDefault();
-
-    bgperfo.classList.toggle("card-slider-drill");
-    bgperfo.classList.toggle("card-slider-perfo");
-
-    textperfo.classList.toggle("visually-hidden");
-    textdrill.classList.toggle("visually-hidden");
-
-    pin1.classList.toggle("slide-first-pin-off");
-    pin2.classList.toggle("slide-second-pin-on");
-});
-
-closecatalog.addEventListener("click", function (evt) {
+iconClosePopupPurchases.addEventListener("click", function (evt) {
 
     evt.preventDefault ();
     console.log("Клик по крестику: закрыть окно");
 
-    popupcatalog.classList.add("popup-catalog-off");
+    popupPurchases.classList.add("popup-catalog-off");
 });
 
-nextshop.addEventListener("click", function (evt) {
+linkResumePurchases.addEventListener("click", function (evt) {
 
     evt.preventDefault ();
     console.log("Клик по кнопке: продолжить покупки");
 
-    popupcatalog.classList.add("popup-catalog-off");
+    popupPurchases.classList.add("popup-catalog-off");
 });
 
-basketbutton.forEach((button) => {
+linkBuyProduct.forEach((button) => {
     button.addEventListener("click", (evt) => {
         evt.preventDefault();
-        popupcatalog.classList.remove("popup-catalog-off");
+        popupPurchases.classList.remove("popup-catalog-off");
+    });
+});
+
+buttons.forEach((item, index, arr) => {
+    item.addEventListener("click", () => {
+        item.classList.add("button-active");
+        buttonsInfo[index].classList.remove("visually-hidden");
+
+        arr.forEach((innderItem, innerIndex) => {
+            if (innerIndex !== index) {
+                buttons[innerIndex].classList.remove("button-active");
+                buttonsInfo[innerIndex].classList.add("visually-hidden");
+            }
+        });
     });
 });
