@@ -6,7 +6,7 @@ const form = openForm.querySelector("form");
 const login = openForm.querySelector("[name=login]");
 const email = openForm.querySelector("[name=email]");
 const comment = openForm.querySelector("[name=comment]"); 
-var storage = localStorage.getItem("login");
+let storage = localStorage.getItem("login");
 const activeButton = document.querySelector(".button-active");
 const hide = document.querySelector(".visually-hidden");
 const linkOpenMap = document.querySelector(".company-map");
@@ -28,9 +28,7 @@ const iconClosePopupPurchases = document.querySelector(".popup-close");
 const linkResumePurchases = document.querySelector(".catalog-button-purchases");
 const buttons = document.querySelectorAll(".services-item-button");
 const buttonsInfo = document.querySelectorAll(".services-container-description div");
-
-var isStorageSupport = true;
-var storage = "";
+let isStorageSupport = true;
 
 try{
     storage = localStorage.getItem("login");
