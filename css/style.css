@@ -522,7 +522,7 @@ a {
     background-repeat: no-repeat;
     position: absolute;
     top: 10px;
-    left: 35px;
+    left: 36px;
 }
 
 .header-address {
@@ -786,11 +786,13 @@ a {
 .slide-back {
     padding: 0;
     border: none;
+    cursor: pointer;
 }
 
 .slide-up {
     padding: 0;
     border: none;
+    cursor: pointer;
 }
 
 .slide-back::before {
@@ -1155,27 +1157,27 @@ a {
 .button-products {
     font-family: var(--font-family);
     font-size: 14px;
-    line-height: 16px;
+    line-height: 14px;
     background-color: var(--logo_button_red);
     text-transform: uppercase;
     text-decoration: none;
     color: var(--basic_white);
-    padding: 11px 24px 10px 24px;
-    margin-top: 26px;
-    margin-bottom: 27px;
+    padding: 13px 24px 10px 24px;
+    margin-top: 25px;
+    margin-bottom: 26px;
 }
 
 .button-manufacturers {
     font-family: var(--font-family);
     font-size: 14px;
-    line-height: 18px;
+    line-height: 16px;
     background-color: var(--logo_button_red);
     text-transform: uppercase;
     text-decoration: none;
     color: var(--basic_white);
-    padding: 11px 38px 3px 39px;
+    padding: 12px 38px 10px 39px;
     margin-top: 25px;
-    margin-bottom: 27px;
+    margin-bottom: 26px;
 }
 
 .popular-products-title {
@@ -1186,7 +1188,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
-    margin-top: 19px;
+    margin-top: 20px;
     margin-right: -20px;
 }
 
@@ -1392,6 +1394,7 @@ a {
 }
 
 .services-delivery-h3 {
+    margin-top: -1px;
     margin-bottom: 29px;
 }
 
@@ -1419,7 +1422,7 @@ a {
     background-image: url(../img/mark/truck-big.png);
     background-repeat: no-repeat;
     position: absolute;
-    top: 20px;
+    top: 21px;
     left: 151px;
 }
 
@@ -1637,14 +1640,14 @@ a {
 .footer-address {
     font-family: var(--font-family);
     font-size: 18px;
-    line-height: 24px;
+    line-height: 25px;
     color: var(--color_footer_p);
     font-style: normal;
     width: 321px;
-    margin-top: 16px;
+    margin-top: 15px;
     margin-left: 3px;
     margin-right: 70px;
-    margin-bottom: 54px;
+    margin-bottom: 53px;
 }
 
 .footer-up-list {
@@ -1711,7 +1714,8 @@ a {
     line-height: 19px;
     color: var(--basic_white);
     margin-top: 36px;
-    margin-right: 155px;
+    margin-left: 1px;
+    margin-right: 154px;
     margin-bottom: 38px;
     width: 235px;
 }
@@ -1751,19 +1755,19 @@ a {
     padding: 0;
 }
 
-.footer-social-item1 {
+.footer-social-item-vk {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--color_social_area);
-    margin-right: 6px;
+    margin-right: 5px;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 41px;
+    height: 41px;
     cursor: pointer;
 }
 
-.footer-social-item2 {
+.footer-social-item-fb {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1771,45 +1775,44 @@ a {
     margin-right: 5px;
     border-radius: 50%;
     width: 40px;
-    height: 40px;
+    height: 41px;
     cursor: pointer;
 }
 
-.footer-social-item3 {
+.footer-social-item-inst {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--color_social_area);
     border-radius: 50%;
     width: 40px;
-    height: 40px;
+    height: 41px;
     cursor: pointer;
 }
 
-.footer-social-item1 svg {
-    padding-top: 8px;
-    padding-left: 1px;
+.footer-social-item-vk svg {
+    padding-top: 7px;
 }
 
-.footer-social-item2 svg {
+.footer-social-item-fb svg {
     padding-top: 8px;
     padding-left: 0px;
 }
 
-.footer-social-item3 svg {
+.footer-social-item-inst svg {
     padding-top: 7px;
     padding-right: 1px;
 }
 
-.footer-social-item1:hover,
-.footer-social-item2:hover,
-.footer-social-item3:hover {
+.footer-social-item-vk:hover,
+.footer-social-item-fb:hover,
+.footer-social-item-inst:hover {
     background-color: var(--logo_button_red);
 }
 
-.footer-social-item1:active,
-.footer-social-item2:active,
-.footer-social-item3:active {
+.footer-social-item-vk:active,
+.footer-social-item-fb:active,
+.footer-social-item-inst:active {
     background-color: var(--logo_button_red);
 }
 
@@ -1950,12 +1953,12 @@ a {
 
 .header-users-login::after {
     content: "";
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     background-color: var(--color_nav_title_button_blue);
     border-radius: 50%;
     position: absolute;
-    top: 47px;
+    top: 48px;
     left: 133px;
 }
 
@@ -2092,7 +2095,7 @@ a {
 
 .catalog-info-perforators-text {
     width: 910px;
-    padding-bottom: 67px;
+    padding-bottom: 66px;
     margin: 0;
 }
 
@@ -2527,13 +2530,13 @@ a {
 
 .range-control .scale {
     height: 2px;
-    background: #161D29;
+    background-color: var(--states-color-dark-blue);
 }
 
 .range-control .bar {
     width: 80%;
     height: 2px;
-    background-color: #5FBB2D;
+    background-color: var(--states-color-green);
 }
 
 .range-control .toggle {

@@ -16,8 +16,8 @@ const modalShow = document.querySelector(".modal-show");
 const modalError = document.querySelector(".modal-error");
 const slidePerforator = document.querySelector(".card-slider-perfo");
 const sliderdrill = document.querySelector(".card-slider-drill");
-const infoSlidePerforato = document.querySelector(".card-slider-slide1");
-const infoSlideDrill = document.querySelector(".card-slider-slide2");
+const infoSlidePerforator = document.querySelector(".card-slider-slide-perfo");
+const infoSlideDrill = document.querySelector(".card-slider-slide-drill");
 const nextSlide = document.querySelector(".slide-up");
 const backSlide = document.querySelector(".slide-back");
 const nextSlidePin = document.querySelector(".slide-first-pin-off");
@@ -91,9 +91,7 @@ form.addEventListener("submit", function (evt) {
 });
 
 iconClosePopup.addEventListener("click", function (evt) {
-
     evt.preventDefault();
-    console.log("Закрыть окно обратной формы");
 
     openForm.classList.add("popup-off");
     openForm.classList.remove("modal-error");
@@ -120,7 +118,7 @@ nextSlide.addEventListener("click", function(evt) {
     slidePerforator.classList.toggle("card-slider-drill");
     slidePerforator.classList.toggle("card-slider-perfo");
 
-    infoSlidePerforato.classList.toggle("visually-hidden");
+    infoSlidePerforator.classList.toggle("visually-hidden");
     infoSlideDrill.classList.toggle("visually-hidden");
 
     nextSlidePin.classList.toggle("slide-first-pin-off");
@@ -133,7 +131,7 @@ backSlide.addEventListener("click", function(evt) {
     slidePerforator.classList.toggle("card-slider-drill");
     slidePerforator.classList.toggle("card-slider-perfo");
 
-    infoSlidePerforato.classList.toggle("visually-hidden");
+    infoSlidePerforator.classList.toggle("visually-hidden");
     infoSlideDrill.classList.toggle("visually-hidden");
 
     nextSlidePin.classList.toggle("slide-first-pin-off");
@@ -141,17 +139,13 @@ backSlide.addEventListener("click", function(evt) {
 });
 
 iconClosePopupPurchases.addEventListener("click", function (evt) {
-
     evt.preventDefault ();
-    console.log("Клик по крестику: закрыть окно");
 
     popupPurchases.classList.add("popup-catalog-off");
 });
 
 linkResumePurchases.addEventListener("click", function (evt) {
-
     evt.preventDefault ();
-    console.log("Клик по кнопке: продолжить покупки");
 
     popupPurchases.classList.add("popup-catalog-off");
 });

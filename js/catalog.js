@@ -1,7 +1,7 @@
-var linkBuyProduct = document.querySelectorAll(".container-card-link");
-var popupPurchases = document.querySelector(".popup-catalog-on");
-var iconClosePopupPurchases = document.querySelector(".popup-close");
-var linkResumePurchases = document.querySelector(".catalog-button-purchases");
+const linkBuyProduct = document.querySelectorAll(".container-card-link");
+const popupPurchases = document.querySelector(".popup-catalog-on");
+const iconClosePopupPurchases = document.querySelector(".popup-close");
+const linkResumePurchases = document.querySelector(".catalog-button-purchases");
 
 
 window.addEventListener("keydown", function (evt) {
@@ -13,17 +13,13 @@ window.addEventListener("keydown", function (evt) {
 });
 
 iconClosePopupPurchases.addEventListener("click", function (evt) {
-
     evt.preventDefault ();
-    console.log("Клик по крестику: закрыть окно");
 
     popupPurchases.classList.add("popup-catalog-off");
 });
 
 linkResumePurchases.addEventListener("click", function (evt) {
-
     evt.preventDefault ();
-    console.log("Клик по кнопке: продолжить покупки");
 
     popupPurchases.classList.add("popup-catalog-off");
 });
