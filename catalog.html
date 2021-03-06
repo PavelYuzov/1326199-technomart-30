@@ -15,7 +15,7 @@
     <link rel="img/apple-touch-icon" href="apple.png" />
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="css/normalize.min.css" />
-    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Интернет-магазин "Техномарт"</title>
   </head>
   <body class="page">
@@ -81,7 +81,15 @@
           </address>
         </div>
         <div class="header-users-login">
-          <a class="header-users-login-user" href="#">Равшан Джамшутович</a>
+          <div class="container-header-users-login">
+            <a class="header-users-login-user" href="#">Равшан Джамшутович</a>
+            <a class="header-users-login-out" href="#" aria-label="Выход">
+              <svg class="header-users-login-out-icon" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z" fill="#C5C5C5"/>
+                <path d="M2.10591 13.952V3.048C2.12391 2.672 2.27691 1.991 3.11591 1.991H8.14291V0H3.11591C0.937914 0 0.111914 1.81 0.0869141 3.027V13.973C0.111914 15.189 0.937914 17 3.11591 17H8.14291V15.01H3.11591C2.27691 15.01 2.12391 14.327 2.10591 13.952Z" fill="#C5C5C5"/>
+                </svg>
+            </a>
+          </div>
           <div class="container-users-menu">
             <a class="header-users-login-orders" href="#">Мои заказы</a>
             <a class="header-users-login-account" href="#">Личный кабинет</a>
@@ -165,10 +173,10 @@
                       <div class="toggle toggle-max"></div>
                     </div>
                     <div class="price-control">
-                      <label class="min-price">
+                      <label class="min-price" aria-label="Минимальная цена">
                         <input type="text" name="min-price" value="0" /> —
                       </label>
-                      <label class="max-price">
+                      <label class="max-price" aria-label="Максимальная цена">
                         <input type="text" name="max-price" value="30000" />
                       </label>
                     </div>
@@ -217,6 +225,7 @@
                       class="catalog-form__input"
                       type="checkbox"
                       name="Hitachi"
+                      disabled
                     />Hitachi
                     <span class="catalog-form__span"></span>
                   </label>
@@ -290,7 +299,7 @@
                 />
                 <div class="container-card-buttons">
                   <a class="container-card-link" href="page-error.html">Купить</a>
-                  <button class="container-card-button">В закладки</button>
+                  <a class="container-card-button" href="#">В закладки</a>
                 </div>
                 <h3 class="container-card-h3">Перфоратор BOSCH BFG 6000</h3>
                 <p class="container-card-old">30500 Р.</p>
@@ -306,7 +315,7 @@
                 />
                 <div class="container-card-buttons">
                   <a class="container-card-link" href="page-error.html">Купить</a>
-                  <button class="container-card-button">В закладки</button>
+                  <a class="container-card-button" href="#">В закладки</a>
                 </div>
                 <h3 class="container-card-h3">Перфоратор BOSCH BFG 6000</h3>
                 <p class="container-card-old">30500 Р.</p>
@@ -322,7 +331,7 @@
                 />
                 <div class="container-card-buttons">
                   <a class="container-card-link" href="page-error.html">Купить</a>
-                  <button class="container-card-button">В закладки</button>
+                  <a class="container-card-button" href="#">В закладки</a>
                 </div>
                 <h3 class="container-card-h3">Перфоратор BOSCH BFG 6000</h3>
                 <p class="container-card-old">30500 Р.</p>
@@ -338,9 +347,9 @@
                 />
                 <div class="container-card-buttons">
                   <a class="container-card-link" href="page-error.html">Купить</a>
-                  <button class="container-card-button">В закладки</button>
+                  <a class="container-card-button" href="#">В закладки</a>
                 </div>
-                <h3 class="container-card-h3">Перфоратор BOSCH BFG 3000</h3>
+                <h3 class="container-card-h3-3000">Перфоратор BOSCH BFG 3000</h3>
                 <p class="container-card-old">22500 Р.</p>
                 <p class="container-card-new">15500 Р.</p>
               </div>
@@ -354,7 +363,7 @@
                 />
                 <div class="container-card-buttons">
                   <a class="container-card-link" href="page-error.html">Купить</a>
-                  <button class="container-card-button">В закладки</button>
+                  <a class="container-card-button" href="#">В закладки</a>
                 </div>
                 <h3 class="container-card-h3">Перфоратор BOSCH BFG 6000</h3>
                 <p class="container-card-old">30500 Р.</p>
@@ -370,10 +379,9 @@
                 />
                 <div class="container-card-buttons">
                   <a class="container-card-link" href="page-error.html">Купить</a>
-                  <button class="container-card-button">В закладки</button>
+                  <a class="container-card-button" href="#">В закладки</a>
                 </div>
-                <h3 class="container-card-h3">Перфоратор BOSCH BFG 2000</h3>
-                <p class="container-card-old">22500 Р.</p>
+                <h3 class="container-card-h3-2000">Перфоратор BOSCH BFG 2000</h3>
                 <p class="container-card-new">12500 Р.</p>
               </div>
               <div class="container-card new-card" tabindex="0">
@@ -386,9 +394,9 @@
                 />
                 <div class="container-card-buttons">
                   <a class="container-card-link" href="page-error.html">Купить</a>
-                  <button class="container-card-button">В закладки</button>
+                  <a class="container-card-button" href="#">В закладки</a>
                 </div>
-                <h3 class="container-card-h3">Перфоратор BOSCH BFG 3000</h3>
+                <h3 class="container-card-h3-3000">Перфоратор BOSCH BFG 3000</h3>
                 <p class="container-card-old">22500 Р.</p>
                 <p class="container-card-new">15500 Р.</p>
               </div>
@@ -402,7 +410,7 @@
                 />
                 <div class="container-card-buttons">
                   <a class="container-card-link" href="page-error.html">Купить</a>
-                  <button class="container-card-button">В закладки</button>
+                  <a class="container-card-button" href="#">В закладки</a>
                 </div>
                 <h3 class="container-card-h3">Перфоратор BOSCH BFG 6000</h3>
                 <p class="container-card-old">30500 Р.</p>
@@ -418,10 +426,9 @@
                 />
                 <div class="container-card-buttons">
                   <a class="container-card-link" href="page-error.html">Купить</a>
-                  <button class="container-card-button">В закладки</button>
+                  <a class="container-card-button" href="#">В закладки</a>
                 </div>
-                <h3 class="container-card-h3">Перфоратор BOSCH BFG 2000</h3>
-                <p class="container-card-old">22500 Р.</p>
+                <h3 class="container-card-h3-2000">Перфоратор BOSCH BFG 2000</h3>
                 <p class="container-card-new">12500 Р.</p>
               </div>
             </div>
@@ -461,13 +468,11 @@
               </button>
               <div class="popup-catalog-down">
                 <div class="container-catalog-button">
-                  <button
+                  <a
                     class="catalog-button-order"
-                    type="button"
-                    aria-label="Оформить заказ"
                   >
                     Оформить заказ
-                  </button>
+                  </a>
                   <button
                     class="catalog-button-purchases"
                     type="button"

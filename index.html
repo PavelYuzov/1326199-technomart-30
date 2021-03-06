@@ -15,10 +15,11 @@
     <link rel="img/apple-touch-icon" href="apple.png" />
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="css/normalize.min.css" />
-    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Интернет-магазин "Техномарт"</title>
   </head>
   <body class="page">
+    <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1>
     <header class="header">
       <div class="container-header-user-navigation">
         <section class="header-user-navigation">
@@ -115,7 +116,6 @@
       </section>
     </header>
     <main class="main">
-      <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1>
       <section class="popular-sections">
         <h2 class="visually-hidden">Популярные разделы</h2>
         <div class="card-materials">
@@ -196,11 +196,11 @@
             />
             <div class="container-card-buttons">
               <a class="container-card-link" href="page-error.html">Купить</a>
-              <button class="container-card-button">В закладки</button>
+              <a class="container-card-button" href="#">В закладки</a>
             </div>
             <h3 class="container-card-h3">Перфоратор BOSCH BFG 9000</h3>
             <p class="container-card-old">32500 Р.</p>
-            <p class="container-card-new">25500 Р.</p>
+            <p class="container-card-new-9000">25500 Р.</p>
           </div>
           <div class="container-card new-card" tabindex="0">
             <img
@@ -214,7 +214,7 @@
               <a class="container-card-link" href="page-error.html">Купить</a>
               <button class="container-card-button">В закладки</button>
             </div>
-            <h3 class="container-card-h3">Перфоратор BOSCH BFG 3000</h3>
+            <h3 class="container-card-h3-3000">Перфоратор BOSCH BFG 3000</h3>
             <p class="container-card-old">22500 Р.</p>
             <p class="container-card-new">15500 Р.</p>
           </div>
@@ -246,7 +246,7 @@
               <a class="container-card-link" href="page-error.html">Купить</a>
               <button class="container-card-button">В закладки</button>
             </div>
-            <h3 class="container-card-h3">Перфоратор BOSCH BFG 2000</h3>
+            <h3 class="container-card-h3-2000">Перфоратор BOSCH BFG 2000</h3>
             <p class="container-card-old">22500 Р.</p>
             <p class="container-card-new">12500 Р.</p>
           </div>
@@ -293,7 +293,7 @@
           <a class="button-manufacturers" href="#">Все производители</a>
         </div>
         <ul class="manufacturers-list">
-          <li class="manufacturers-item" aria-current="page" tabindex="0">
+          <li class="manufacturers-item" aria-current="page">
             <a class="manufacturers-link" href="#">
               <img
                 src="img/company/bosch.png"
@@ -303,7 +303,7 @@
               />
             </a>
           </li>
-          <li class="manufacturers-item" tabindex="0">
+          <li class="manufacturers-item">
             <a class="manufacturers-link" href="#">
               <img
                 src="img/company/makita.png"
@@ -313,7 +313,7 @@
               />
             </a>
           </li>
-          <li class="manufacturers-item" tabindex="0">
+          <li class="manufacturers-item">
             <a class="manufacturers-link" href="#">
               <img
                 src="img/company/dewalt.png"
@@ -323,7 +323,7 @@
               />
             </a>
           </li>
-          <li class="manufacturers-item" tabindex="0">
+          <li class="manufacturers-item">
             <a class="manufacturers-link" href="#">
               <img
                 src="img/company/interskol.png"
@@ -333,7 +333,7 @@
               />
             </a>
           </li>
-          <li class="manufacturers-item" tabindex="0">
+          <li class="manufacturers-item">
             <a class="manufacturers-link" href="#">
               <img
                 src="img/company/hitachi.png"
@@ -343,7 +343,7 @@
               />
             </a>
           </li>
-          <li class="manufacturers-item" tabindex="0">
+          <li class="manufacturers-item">
             <a class="manufacturers-link" href="#">
               <img
                 src="img/company/lg.png"
@@ -353,7 +353,7 @@
               />
             </a>
           </li>
-          <li class="manufacturers-item" tabindex="0">
+          <li class="manufacturers-item">
             <a class="manufacturers-link" href="#">
               <img
                 src="img/company/aeg.png"
@@ -363,7 +363,7 @@
               />
             </a>
           </li>
-          <li class="manufacturers-item" tabindex="0">
+          <li class="manufacturers-item">
             <a class="manufacturers-link" href="#">
               <img
                 src="img/company/metabo.png"
@@ -463,7 +463,7 @@
           <a class="button-help" href="page-error.html">Заблудились? Напишите нам!</a>
         </div>
       </section>
-      <section class="popup-map-on visually-hidden">
+      <section class="popup-map-on popup-map-off">
         <h3 class="visually-hidden">Карта с расположением магазина</h3>
         <div class="container-map">
           <div style="position: relative; overflow: hidden">
@@ -708,13 +708,13 @@
           </div>
           <div class="footer-development">
             <p class="footer-development-connection">Разработано —</p>
-            <a class="footer-development-connection-link" href="htmlacademy.ru"
+            <a class="footer-development-connection-link" href="https://htmlacademy.ru/intensive/htmlcss"
               >htmlacademy.ru</a
             >
           </div>
         </section>
       </div>
     </footer>
-    <script src="js/index.min.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

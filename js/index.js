@@ -9,6 +9,7 @@ const comment = openForm.querySelector("[name=comment]");
 let storage = localStorage.getItem("login");
 const activeButton = document.querySelector(".button-active");
 const hide = document.querySelector(".visually-hidden");
+const closeMap = document.querySelector(".popup-map-off");
 const linkOpenMap = document.querySelector(".company-map");
 const openPopupMap = document.querySelector(".popup-map-on");
 const iconCloseMap = document.querySelector(".map-close");
@@ -100,7 +101,7 @@ iconClosePopup.addEventListener("click", function (evt) {
 linkOpenMap.addEventListener("click", function(evt) {
     evt.preventDefault();
 
-    openPopupMap.classList.remove("visually-hidden");
+    openPopupMap.classList.remove("popup-map-off");
     openPopupMap.classList.add("modal-show");
 });
 
@@ -108,7 +109,7 @@ linkOpenMap.addEventListener("click", function(evt) {
 iconCloseMap.addEventListener("click", function(evt) {
     evt.preventDefault();
 
-    openPopupMap.classList.add("visually-hidden");
+    openPopupMap.classList.add("popup-map-off");
     openPopupMap.classList.remove("modal-show");
 });
 
