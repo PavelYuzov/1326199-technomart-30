@@ -82,8 +82,8 @@
         </div>
         <div class="header-users-login">
           <div class="container-header-users-login">
-            <a class="header-users-login-user" href="#">Равшан Джамшутович</a>
-            <a class="header-users-login-out" href="#" aria-label="Выход">
+            <a class="header-users-login-user" href="page-error.html">Равшан Джамшутович</a>
+            <a class="header-users-login-out" href="page-error.html" aria-label="Выход">
               <svg class="header-users-login-out-icon" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z" fill="#C5C5C5"/>
                 <path d="M2.10591 13.952V3.048C2.12391 2.672 2.27691 1.991 3.11591 1.991H8.14291V0H3.11591C0.937914 0 0.111914 1.81 0.0869141 3.027V13.973C0.111914 15.189 0.937914 17 3.11591 17H8.14291V15.01H3.11591C2.27691 15.01 2.12391 14.327 2.10591 13.952Z" fill="#C5C5C5"/>
@@ -186,71 +186,28 @@
                   <legend class="catalog-form__legend-checkbox">
                     Производители:
                   </legend>
-                  <label class="catalog-form__label-checkbox option">
-                    <input
-                      class="catalog-form__input"
-                      type="checkbox"
-                      name="Bosch"
-                      checked
-                    />Bosch
-                    <span class="catalog-form__span"></span>
-                  </label>
-                  <label class="catalog-form__label-checkbox option">
-                    <input
-                      class="catalog-form__input"
-                      type="checkbox"
-                      name="Interskol"
-                    />ИНТЕРСКОЛ
-                    <span class="catalog-form__span"></span>
-                  </label>
-                  <label class="catalog-form__label-checkbox option">
-                    <input
-                      class="catalog-form__input"
-                      type="checkbox"
-                      name="Makita"
-                      checked
-                    />Makita
-                    <span class="catalog-form__span"></span>
-                  </label>
-                  <label class="catalog-form__label-checkbox option">
-                    <input
-                      class="catalog-form__input"
-                      type="checkbox"
-                      name="DeWalt"
-                    />DeWalt
-                    <span class="catalog-form__span"></span>
-                  </label>
-                  <label class="catalog-form__label-checkbox option">
-                    <input
-                      class="catalog-form__input"
-                      type="checkbox"
-                      name="Hitachi"
-                      disabled
-                    />Hitachi
-                    <span class="catalog-form__span"></span>
-                  </label>
+                  <input class="checkbox" id="Bosch" type="checkbox" name="Bosch" checked>
+                  <label class="label-checkbox" for="Bosch">Bosch</label>
+
+                  <input class="checkbox" id="Interskol" type="checkbox" name="Interskol" >
+                  <label class="label-checkbox" for="Interskol">Интерскол</label>
+
+                  <input class="checkbox" id="Makita" type="checkbox" name="Makita"  checked>
+                  <label class="label-checkbox" for="Makita">Makita</label>
+
+                  <input class="checkbox" id="Dewalt" type="checkbox" name="DeWalt" >
+                  <label class="label-checkbox" for="Dewalt">Dewalt</label>
+
+                  <input class="checkbox" id="Hitachi" type="checkbox" name="Hitachi" >
+                  <label class="label-checkbox" for="Hitachi">Hitachi</label>
                 </fieldset>
                 <fieldset class="catalog-form__fieldset-radio">
                   <legend class="catalog-form__legend-radio">Питание:</legend>
-                  <label class="catalog-form__label-radio option">
-                    <input
-                      class="catalog-form__radio"
-                      type="radio"
-                      name="type-energy"
-                      value="Battery"
-                      checked
-                    />Аккумуляторные
-                    <span class="catalog-form__span-radio"></span>
-                  </label>
-                  <label class="catalog-form__label-radio option">
-                    <input
-                      class="catalog-form__radio"
-                      type="radio"
-                      name="type-energy"
-                      value="AC_power"
-                    />Сетевые
-                    <span class="catalog-form__span-radio"></span>
-                  </label>
+                  <input class="radio" id="Battery" type="radio" name="type-energy" value="Battery" checked>
+                  <label class="label-radio" for="Battery">Аккумуляторные</label>
+
+                  <input class="radio" id="AC" type="radio" name="type-energy" value="AC_power">
+                  <label class="label-radio" for="AC">Сетевые</label>
                 </fieldset>
                 <input
                   class="catalog-form__submit"
