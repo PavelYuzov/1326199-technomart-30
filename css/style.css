@@ -65,6 +65,7 @@
     --background-color-popup-catalog: #F1F1F1;
     --box-shadow-color-015: rgba(0, 0, 0, 0.15);
     --box-shadow-color-025: rgba(0, 0, 0, 0.25);
+    --disabled-label-color: rgba(0, 0, 0, 0.4);
     --scale-colors: #D7DCDE;
     --boreder-color-chrome: rgb(77, 144, 254);
 
@@ -2280,6 +2281,10 @@ a {
     display: none;
 }
 
+.container-card-h3:focus-within {
+    box-shadow: 0px 4px 20px var(--color_rgba_black_border);
+}
+
 .container-card-link {
     padding-top: 10px;
     padding-right: 13px;
@@ -3012,11 +3017,11 @@ a {
 }
 
 .checkbox:disabled + .label-checkbox {
-    opacity: 0.4;
+    color: var(--disabled-label-color);
 }
 
 .checkbox:disabled:checked + .label-checkbox {
-    opacity: 0.4;
+    color: var(--disabled-label-color);
 }
 
 .label-radio {
@@ -3160,7 +3165,7 @@ a {
 }
 
 .radio:disabled + .label-radio {
-    opacity: 0.4;
+    color: var(--disabled-label-color);
 }
 
 .radio:focus + .label-radio::before {
