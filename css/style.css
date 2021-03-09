@@ -663,7 +663,6 @@ a {
 
 .header-users-login-out {
     background-color: var(--basic_white);
-    /* padding: 13px 28px 11px 29px; */
 }
 
 .header-users-login-out-icon {
@@ -1164,8 +1163,6 @@ a {
     padding-bottom: 15px;
 }
 
-/*  |MAIN|__SECTION-2    */
-
 .popular-products {
     margin: 0 auto;
     width: 940px;
@@ -1316,6 +1313,8 @@ a {
     margin-right: 28px;
     margin-bottom: 7px;
     margin-left: 26px;
+    position: absolute;
+    top: 178px;
 }
 
 .container-card-h3-2000 {
@@ -1329,6 +1328,8 @@ a {
     margin-right: 28px;
     margin-bottom: 7px;
     margin-left: 26px;
+    position: absolute;
+    top: 178px;
 }
 
 
@@ -1349,6 +1350,20 @@ a {
     color: var(--basic_white);
     background-image: url("../img/background/bg-new-price.svg");
     background-repeat: no-repeat;
+}
+
+.container-card-new-2000 {
+    font-family: "PT Sans", "Tahoma", sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 18px;
+    color: var(--basic_white);
+    background-image: url("../img/background/bg-new-price.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 241px;
+    left: 44px;
+    padding: 10px 45px 10px 32px;
 }
 
 .popular-manufacturers {
@@ -2218,10 +2233,13 @@ a {
     margin-right: 28px;
     margin-bottom: 7px;
     margin-left: 28px;
+    position: absolute;
+    top: 178px;
 }
 
 .container-card-old {
     margin: 0;
+    margin-top: 49px;
     margin-bottom: -4px;
 }
 
@@ -2257,10 +2275,16 @@ a {
     top: 50%;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
+    outline: none;
 }
 
 .container-card-buttons {
     display: none;
+    position: absolute;
+}
+
+.container-card-h3:focus-within .container-card-buttons {
+    outline: none;
 }
 
 .container-card:hover .container-card-img {
@@ -2281,8 +2305,20 @@ a {
     display: none;
 }
 
-.container-card-h3:focus-within {
+.container-card:focus-within {
     box-shadow: 0px 4px 20px var(--color_rgba_black_border);
+    outline-color: var(--boreder-color-chrome);
+    outline-offset: 3px;
+    outline-style: auto;
+    outline-width: 5px;
+}
+
+.container-card:focus-within .container-card-link-h3 {
+    outline: none;
+}
+
+.container-card-buttons:focus-within .container-card {
+    outline: none;
 }
 
 .container-card-link {
