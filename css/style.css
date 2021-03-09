@@ -3019,25 +3019,13 @@ a {
 }
 
 .checkbox:disabled + .label-checkbox::before {
-    position: absolute;
-    width: 27px;
-    height: 27px;
-    background-image: url(../img/mark/checkbox-off-dis.svg);
-    background-repeat: no-repeat;
-    content: "";
-    top: 0px;
-    left: -35px;
+    background-image: url(../img/mark/checkbox-off.svg);
+    opacity: 0.3;
 }
 
 .checkbox:disabled:checked + .label-checkbox::before {
-    position: absolute;
-    width: 27px;
-    height: 27px;
-    background-image: url(../img/mark/checkbox-on-dis.svg);
-    background-repeat: no-repeat;
-    content: "";
-    top: 0px;
-    left: -35px;
+    background-image: url(../img/mark/checkbox-on.svg);
+    opacity: 0.3;
 }
 
 .checkbox:focus + .label-checkbox::before {
@@ -3096,7 +3084,7 @@ a {
     left: -35px;
 }
 
-.radio:hover + .label-radio:last-child:before {
+.radio:hover + .label-radio:last-child::before {
     position: absolute;
     width: 26px;
     height: 26px;
@@ -3151,18 +3139,19 @@ a {
     left: -35px;
 }
 
-.radio:checked:disabled + .label-radio:last-child:before {
-    position: absolute;
-    width: 26px;
-    height: 26px;
-    background-image: url(../img/mark/radio-on-dis.svg);
-    background-repeat: no-repeat;
-    content: "";
-    top: 0px;
-    left: -35px;
+.radio:checked:disabled + .label-radio:last-child::before {
+    background-image: url(../img/mark/radio-on.svg);
+    opacity: 0.3;
 }
 
-.radio:disabled + .label-radio:last-child:before {
+.radio:disabled + .label-radio:last-child::before {
+    background-image: url(../img/mark/radio-off.svg);
+    top: 0px;
+    left: -35px;
+    opacity: 0.3;
+}
+
+.radio:disabled + .label-radio::before {
     position: absolute;
     width: 26px;
     height: 26px;
@@ -3173,26 +3162,10 @@ a {
     left: -35px;
 }
 
-.radio:disabled + .label-radio:before {
-    position: absolute;
-    width: 26px;
-    height: 26px;
-    background-image: url(../img/mark/radio-off-dis.svg);
-    background-repeat: no-repeat;
-    content: "";
+.radio:checked:disabled + .label-radio::before {
+    background-image: url(../img/mark/radio-on.svg);
     top: 0px;
-    left: -35px;
-}
-
-.radio:checked:disabled + .label-radio:before {
-    position: absolute;
-    width: 26px;
-    height: 26px;
-    background-image: url(../img/mark/radio-on-dis.svg);
-    background-repeat: no-repeat;
-    content: "";
-    top: 0px;
-    left: -35px;
+    opacity: 0.3;
 }
 
 .label-radio:last-child::before {
